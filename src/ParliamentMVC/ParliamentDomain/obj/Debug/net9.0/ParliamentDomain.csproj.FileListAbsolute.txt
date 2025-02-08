@@ -9,3 +9,4 @@ D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\obj\Debug
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\obj\Debug\net9.0\refint\ParliamentDomain.dll
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\obj\Debug\net9.0\ParliamentDomain.pdb
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\obj\Debug\net9.0\ref\ParliamentDomain.dll
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\obj\Debug\net9.0\ParliamentDomain.sourcelink.json

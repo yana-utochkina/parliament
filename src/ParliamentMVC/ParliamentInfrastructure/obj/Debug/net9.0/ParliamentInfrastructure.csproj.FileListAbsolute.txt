@@ -221,3 +221,4 @@ D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\o
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\ParliamentInfrastructure.pdb
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\ParliamentInfrastructure.genruntimeconfig.cache
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\ref\ParliamentInfrastructure.dll
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\ParliamentInfrastructure.sourcelink.json
