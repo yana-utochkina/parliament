@@ -40,10 +40,12 @@ D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\w
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap_lumen.min.css
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap_lumen.css
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\jquery\dist\jquery.slim.min.js
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
@@ -71,6 +73,8 @@ wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap_lumen.css
+wwwroot\lib\bootstrap\dist\css\bootstrap_lumen.min.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css

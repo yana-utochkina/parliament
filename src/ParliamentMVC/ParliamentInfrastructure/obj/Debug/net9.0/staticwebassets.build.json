@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Yf9bIyyFRT8seFrjq0RiWz50jKugAQu+tm+YASZBKe4=",
+  "Hash": "uyeIhiYlEqXMirEATadptOnJvRhTVOq2E5hmep69iT4=",
   "Source": "ParliamentInfrastructure",
   "BasePath": "_content/ParliamentInfrastructure",
   "Mode": "Default",
@@ -920,6 +920,27 @@
       "OriginalItemSpec": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js"
     },
     {
+      "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\k6zdoh4kgq-p88v6lhq36.gz",
+      "SourceId": "ParliamentInfrastructure",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ParliamentInfrastructure",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap_lumen.min#[.{fingerprint=p88v6lhq36}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.min.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "9kdax2e3r7",
+      "Integrity": "KQyv+dQRfY80FUNbOSq5lUgNPuQmmBzXZvQH0T6eppM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.min.css"
+    },
+    {
       "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\ktklzncvfr-b7pk76d08c.gz",
       "SourceId": "ParliamentInfrastructure",
       "SourceType": "Discovered",
@@ -1002,6 +1023,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\mtg8dnirbf-7ua1r7w0q9.gz",
+      "SourceId": "ParliamentInfrastructure",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ParliamentInfrastructure",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap_lumen#[.{fingerprint=7ua1r7w0q9}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "xwfdom5ptz",
+      "Integrity": "0VFztqs342cbGk35B9v+a3y2Yiq6xCc+2wuXsTJGDgk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.css"
     },
     {
       "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\n7yxb9zwdo-muycvpuwrr.gz",
@@ -1632,6 +1674,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.css",
+      "SourceId": "ParliamentInfrastructure",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\",
+      "BasePath": "_content/ParliamentInfrastructure",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap_lumen#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7ua1r7w0q9",
+      "Integrity": "4ZsgTv4j5EbJ2FZVxKv7y5uAAqUsmQNv4RR0JCySYn8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.css"
+    },
+    {
+      "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.min.css",
+      "SourceId": "ParliamentInfrastructure",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\",
+      "BasePath": "_content/ParliamentInfrastructure",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap_lumen.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p88v6lhq36",
+      "Integrity": "eQXtl1QlkkhXl2hXezguEi/adrKmcbSWmwrlAun5ARU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.min.css"
     },
     {
       "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
@@ -6002,6 +6086,602 @@
         {
           "Name": "integrity",
           "Value": "sha256-MfXRRxefGD0S0k5f3gXwZNQW7ELiStY01dZj+IbLlaw="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap_lumen.7ua1r7w0q9.css",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\mtg8dnirbf-7ua1r7w0q9.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000028444647"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35155"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0VFztqs342cbGk35B9v+a3y2Yiq6xCc+2wuXsTJGDgk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 20:26:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"4ZsgTv4j5EbJ2FZVxKv7y5uAAqUsmQNv4RR0JCySYn8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7ua1r7w0q9"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap_lumen.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4ZsgTv4j5EbJ2FZVxKv7y5uAAqUsmQNv4RR0JCySYn8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap_lumen.7ua1r7w0q9.css",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "288198"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4ZsgTv4j5EbJ2FZVxKv7y5uAAqUsmQNv4RR0JCySYn8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 20:26:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7ua1r7w0q9"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap_lumen.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4ZsgTv4j5EbJ2FZVxKv7y5uAAqUsmQNv4RR0JCySYn8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap_lumen.7ua1r7w0q9.css.gz",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\mtg8dnirbf-7ua1r7w0q9.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35155"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0VFztqs342cbGk35B9v+a3y2Yiq6xCc+2wuXsTJGDgk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 20:26:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7ua1r7w0q9"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap_lumen.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0VFztqs342cbGk35B9v+a3y2Yiq6xCc+2wuXsTJGDgk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap_lumen.css",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\mtg8dnirbf-7ua1r7w0q9.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000028444647"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35155"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0VFztqs342cbGk35B9v+a3y2Yiq6xCc+2wuXsTJGDgk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 20:26:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"4ZsgTv4j5EbJ2FZVxKv7y5uAAqUsmQNv4RR0JCySYn8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4ZsgTv4j5EbJ2FZVxKv7y5uAAqUsmQNv4RR0JCySYn8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap_lumen.css",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "288198"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4ZsgTv4j5EbJ2FZVxKv7y5uAAqUsmQNv4RR0JCySYn8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 20:26:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4ZsgTv4j5EbJ2FZVxKv7y5uAAqUsmQNv4RR0JCySYn8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap_lumen.css.gz",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\mtg8dnirbf-7ua1r7w0q9.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35155"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0VFztqs342cbGk35B9v+a3y2Yiq6xCc+2wuXsTJGDgk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 20:26:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0VFztqs342cbGk35B9v+a3y2Yiq6xCc+2wuXsTJGDgk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap_lumen.min.css",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\k6zdoh4kgq-p88v6lhq36.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000030605374"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32673"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KQyv+dQRfY80FUNbOSq5lUgNPuQmmBzXZvQH0T6eppM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 20:26:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"eQXtl1QlkkhXl2hXezguEi/adrKmcbSWmwrlAun5ARU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eQXtl1QlkkhXl2hXezguEi/adrKmcbSWmwrlAun5ARU="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap_lumen.min.css",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "239029"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eQXtl1QlkkhXl2hXezguEi/adrKmcbSWmwrlAun5ARU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 20:26:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eQXtl1QlkkhXl2hXezguEi/adrKmcbSWmwrlAun5ARU="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap_lumen.min.css.gz",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\k6zdoh4kgq-p88v6lhq36.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32673"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KQyv+dQRfY80FUNbOSq5lUgNPuQmmBzXZvQH0T6eppM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 20:26:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KQyv+dQRfY80FUNbOSq5lUgNPuQmmBzXZvQH0T6eppM="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap_lumen.min.p88v6lhq36.css",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\k6zdoh4kgq-p88v6lhq36.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000030605374"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32673"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KQyv+dQRfY80FUNbOSq5lUgNPuQmmBzXZvQH0T6eppM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 20:26:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"eQXtl1QlkkhXl2hXezguEi/adrKmcbSWmwrlAun5ARU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p88v6lhq36"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap_lumen.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eQXtl1QlkkhXl2hXezguEi/adrKmcbSWmwrlAun5ARU="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap_lumen.min.p88v6lhq36.css",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "239029"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eQXtl1QlkkhXl2hXezguEi/adrKmcbSWmwrlAun5ARU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 20:26:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p88v6lhq36"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap_lumen.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eQXtl1QlkkhXl2hXezguEi/adrKmcbSWmwrlAun5ARU="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap_lumen.min.p88v6lhq36.css.gz",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\k6zdoh4kgq-p88v6lhq36.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32673"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KQyv+dQRfY80FUNbOSq5lUgNPuQmmBzXZvQH0T6eppM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 20:26:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p88v6lhq36"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap_lumen.min.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KQyv+dQRfY80FUNbOSq5lUgNPuQmmBzXZvQH0T6eppM="
         }
       ]
     },

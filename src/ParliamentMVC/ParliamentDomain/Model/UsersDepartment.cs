@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ParliamentDomain.Model;
+﻿namespace ParliamentDomain.Model;
 
 public partial class UsersDepartment : Entity
 {

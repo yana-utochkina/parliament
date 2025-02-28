@@ -1,0 +1,39 @@
+﻿@model ParliamentDomain.Model.Location
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Видалення</h1>
+
+<h3>Ви впевненні що хочете видалити цей запис?</h3>
+<div>
+    <h4>Місце</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GoogleMapsLink)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GoogleMapsLink)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Contact)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Contact.Email)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Видалити" class="btn btn-danger" /> |
+        <a asp-action="Index">Повернутися до переліку</a>
+    </form>
+</div>

@@ -420,6 +420,30 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"s35ty4nyc5"},{"Name":"integrity","Value":"sha256-GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw="},{"Name":"label","Value":"_content/ParliamentInfrastructure/lib/bootstrap/dist/css/bootstrap.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"281046"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw=\u0022"},{"Name":"Last-Modified","Value":"Fri, 07 Feb 2025 13:34:07 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ParliamentInfrastructure/lib/bootstrap/dist/css/bootstrap_lumen.7ua1r7w0q9.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap_lumen.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7ua1r7w0q9"},{"Name":"integrity","Value":"sha256-4ZsgTv4j5EbJ2FZVxKv7y5uAAqUsmQNv4RR0JCySYn8="},{"Name":"label","Value":"_content/ParliamentInfrastructure/lib/bootstrap/dist/css/bootstrap_lumen.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"288198"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00224ZsgTv4j5EbJ2FZVxKv7y5uAAqUsmQNv4RR0JCySYn8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 28 Feb 2025 20:26:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ParliamentInfrastructure/lib/bootstrap/dist/css/bootstrap_lumen.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap_lumen.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-4ZsgTv4j5EbJ2FZVxKv7y5uAAqUsmQNv4RR0JCySYn8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"288198"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00224ZsgTv4j5EbJ2FZVxKv7y5uAAqUsmQNv4RR0JCySYn8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 28 Feb 2025 20:26:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ParliamentInfrastructure/lib/bootstrap/dist/css/bootstrap_lumen.min.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap_lumen.min.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-eQXtl1QlkkhXl2hXezguEi/adrKmcbSWmwrlAun5ARU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"239029"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022eQXtl1QlkkhXl2hXezguEi/adrKmcbSWmwrlAun5ARU=\u0022"},{"Name":"Last-Modified","Value":"Fri, 28 Feb 2025 20:26:07 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ParliamentInfrastructure/lib/bootstrap/dist/css/bootstrap_lumen.min.p88v6lhq36.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap_lumen.min.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"p88v6lhq36"},{"Name":"integrity","Value":"sha256-eQXtl1QlkkhXl2hXezguEi/adrKmcbSWmwrlAun5ARU="},{"Name":"label","Value":"_content/ParliamentInfrastructure/lib/bootstrap/dist/css/bootstrap_lumen.min.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"239029"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022eQXtl1QlkkhXl2hXezguEi/adrKmcbSWmwrlAun5ARU=\u0022"},{"Name":"Last-Modified","Value":"Fri, 28 Feb 2025 20:26:07 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ParliamentInfrastructure/lib/bootstrap/dist/js/bootstrap.bundle.6cfz1n2cew.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\js\bootstrap.bundle.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

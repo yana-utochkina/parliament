@@ -1,0 +1,12 @@
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\bin\Release\net9.0\ParliamentDomain.deps.json
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\bin\Release\net9.0\ParliamentDomain.dll
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\bin\Release\net9.0\ParliamentDomain.pdb
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\obj\Release\net9.0\ParliamentDomain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\obj\Release\net9.0\ParliamentDomain.AssemblyInfoInputs.cache
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\obj\Release\net9.0\ParliamentDomain.AssemblyInfo.cs
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\obj\Release\net9.0\ParliamentDomain.csproj.CoreCompileInputs.cache
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\obj\Release\net9.0\ParliamentDomain.sourcelink.json
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\obj\Release\net9.0\ParliamentDomain.dll
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\obj\Release\net9.0\refint\ParliamentDomain.dll
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\obj\Release\net9.0\ParliamentDomain.pdb
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentDomain\obj\Release\net9.0\ref\ParliamentDomain.dll

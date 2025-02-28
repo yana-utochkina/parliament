@@ -149,6 +149,14 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
+      "Id": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.css"
+    },
+    {
+      "Id": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap_lumen.min.css"
+    },
+    {
       "Id": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
