@@ -15,7 +15,7 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // GET: Locations
-        public async Task<IActionResult> Index(int? id)
+        public async Task<IActionResult> Index()
         {
             var dbparliamentContext = _context.Locations.Include(l => l.Contact);
             return View(await dbparliamentContext.ToListAsync());

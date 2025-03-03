@@ -44,17 +44,17 @@
             @Html.DisplayNameFor(model => model.Department)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Department.Name)
+            <a asp-controller = "Departments" asp-action = "Details" asp-route-id = "@Model?.DepartmentId">@Html.DisplayFor(model => model.Department.Name)</a>
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Location)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Location.Address)
+            <a asp-controller = "Locations" asp-action = "Details" asp-route-id = "@Model?.LocationId">@Html.DisplayFor(model => model.Location.Address)</a>
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Змінити</a> |
-    <a asp-action="Index">Повернутися до переліку</a>
+    <a asp-action = "Edit" asp-route-id = "@Model?.Id">Змінити</a> |
+    <a asp-action = "Index">До переліку подій</a>
 </div>

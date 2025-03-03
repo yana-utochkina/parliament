@@ -15,7 +15,7 @@ public partial class Location : Entity
     [Display(Name = "Посилання на GoogleMaps")]
     public string? GoogleMapsLink { get; set; }
 
-    [Display(Name = "Контакти")]
+    [Display(Name = "Електронна пошта")]
     public virtual Contact Contact { get; set; } = null!;
 
     [Display(Name = "Події")]

@@ -9,19 +9,16 @@
 <p>
     <a asp-action="Create">Створити новину</a>
 </p>
-<table class="table">
+<table class="table table-hover">
     <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.PublisherId)
-            </th>
-            <th>
+        <tr class="table-secondary">
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.Title)
             </th>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.PublicationDate)
             </th>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.Department)
             </th>
             <th></th>
@@ -30,9 +27,6 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.PublisherId)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>

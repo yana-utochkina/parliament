@@ -9,18 +9,18 @@
 <p>
     <a asp-action="Create">Створити нове місце</a>
 </p>
-<table class="table">
+<table class="table table-hover">
     <thead>
-        <tr>
-            <th>
+        <tr class="table-secondary">
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.Address)
             </th>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.GoogleMapsLink)
             </th>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.Contact)
-            </th>
+            </thscope>
             <th></th>
         </tr>
     </thead>

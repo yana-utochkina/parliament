@@ -26,11 +26,21 @@
             @Html.DisplayNameFor(model => model.Contact)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Contact.Email)
+            <a asp-controller="Contacts" asp-action="Details" asp-route-id="@Model?.ContactId">
+                @Html.DisplayFor(model => model.Contact.Email)
+            </a>
+        </dd>
+        <dt class="col-sm-2">
+            Події в цьому місці
+        </dt>
+        <dd class="col-sm-10">
+            <a asp-controller="Events" asp-action="Index" asp-route-locationId="@Model?.Id">
+                Перейти
+            </a>
         </dd>
     </dl>
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Змінити</a> |
-    <a asp-action="Index">Повернутися до переліку</a>
+    <a asp-action="Index">До переліку місць</a>
 </div>

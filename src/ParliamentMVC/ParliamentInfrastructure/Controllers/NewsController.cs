@@ -15,10 +15,17 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // GET: News
-        public async Task<IActionResult> Index(int? id)
+        public async Task<IActionResult> Index(int? departmentId)
         {
-            var dbparliamentContext = _context.News.Include(n => n.Department);
-            return View(await dbparliamentContext.ToListAsync());
+            if (departmentId == null)
+            {
+                var dbparliamentContext = _context.News.Include(n => n.Department);
+                return View(await dbparliamentContext.ToListAsync());
+            }
+            // Finding news by departmentId
+            var newsByDepartment = _context.News.Where(n => n.DepartmentId == departmentId)
+                .Include(n => n.Department);
+            return View(await newsByDepartment.ToListAsync());
         }
 
         // GET: News/Details/5

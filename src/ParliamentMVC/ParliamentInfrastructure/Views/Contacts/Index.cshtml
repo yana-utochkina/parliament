@@ -9,16 +9,16 @@
 <p>
     <a asp-action="Create">Створити новий контакт</a>
 </p>
-<table class="table">
+<table class="table table-hover">
     <thead>
-        <tr>
-            <th>
+        <tr class="table-secondary">
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.Phone)
             </th>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.Email)
             </th>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.InstagramLink)
             </th>
             <th></th>

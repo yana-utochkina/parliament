@@ -15,21 +15,24 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // GET: Events
-        public async Task<IActionResult> Index(int? id, string? address)
+        public async Task<IActionResult> Index(int? locationId, int? departmentId)
         {
-            if (id == null)
+            if (locationId == null && departmentId == null)
             {
-                //return RedirectToAction("Index", "Locations");
                 var dbparliamentContext = _context.Events.Include(e => e.Department).Include(e => e.Location);
                 return View(await dbparliamentContext.ToListAsync());
             }
-            // знаходження подій за локацією
-            ViewBag.LocationId = id;
-            ViewBag.LocationAddress = address;
-
-            var eventByLocation = _context.Events.Where(e => e.LocationId == id).Include(e => e.Location);
-            return View(await eventByLocation.ToListAsync());
-
+            if (departmentId == null)
+            {
+                // Finding events by locationId
+                var eventsByLocation = _context.Events.Where(e => e.LocationId == locationId)
+                    .Include(e => e.Location);
+                return View(await eventsByLocation.ToListAsync());
+            }
+            // Finding events by departmentId
+            var eventsByDepartment = _context.Events.Where(e => e.DepartmentId == departmentId)
+                .Include(e => e.Department);
+            return View(await eventsByDepartment.ToListAsync());
         }
 
         // GET: Events/Details/5
