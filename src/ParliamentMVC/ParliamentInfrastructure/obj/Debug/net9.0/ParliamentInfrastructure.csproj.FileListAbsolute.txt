@@ -132,7 +132,6 @@ D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\o
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\scopedcss\bundle\ParliamentInfrastructure.styles.css
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\scopedcss\projectbundle\ParliamentInfrastructure.bundle.scp.css
-D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\compressed\b40hvymxwo-b9sayid5wm.gz
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\compressed\h9toojmfy4-61n19gt1b8.gz
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\compressed\hfsaskyghh-xtxxf3hu2r.gz
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\compressed\603rvhwd54-bqjiyaj88i.gz
@@ -349,3 +348,5 @@ D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\b
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\compressed\mtg8dnirbf-7ua1r7w0q9.gz
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\compressed\k6zdoh4kgq-p88v6lhq36.gz
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\compressed\rsfclybc4x-5ssondd4fw.gz
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\compressed\b40hvymxwo-v6xxc2o7l9.gz

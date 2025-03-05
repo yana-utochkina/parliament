@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uyeIhiYlEqXMirEATadptOnJvRhTVOq2E5hmep69iT4=",
+  "Hash": "135XnzkMKrUIB1eJCz1EC+IlpNXzl33SE6vgbzeHqiw=",
   "Source": "ParliamentInfrastructure",
   "BasePath": "_content/ParliamentInfrastructure",
   "Mode": "Default",
@@ -437,12 +437,12 @@
       "OriginalItemSpec": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\b40hvymxwo-b9sayid5wm.gz",
+      "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\b40hvymxwo-v6xxc2o7l9.gz",
       "SourceId": "ParliamentInfrastructure",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/ParliamentInfrastructure",
-      "RelativePath": "css/site#[.{fingerprint=b9sayid5wm}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=v6xxc2o7l9}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -451,8 +451,8 @@
       "RelatedAsset": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "wf4wcyqcqt",
-      "Integrity": "fNKkLSNFLZMVTc2zVrpMXQqOwPU3sU4GWcfEbCR2V1I=",
+      "Fingerprint": "dk3g5yi26l",
+      "Integrity": "DQPLjn4e9d4lhBxFAI2FOOOXfZ7u3wPYS4+AITzgWNM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\css\\site.css"
@@ -1130,6 +1130,27 @@
       "OriginalItemSpec": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\scopedcss\\bundle\\ParliamentInfrastructure.styles.css"
     },
     {
+      "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\rsfclybc4x-5ssondd4fw.gz",
+      "SourceId": "ParliamentInfrastructure",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ParliamentInfrastructure",
+      "RelativePath": "lib/images/abstract#[.{fingerprint=5ssondd4fw}]?.svg.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\abstract.svg",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "40rzihqydg",
+      "Integrity": "jDabPeNOhIbYJIwUkDHcnQPyRIubN5cH/n0v1Bp9QDo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\abstract.svg"
+    },
+    {
       "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\sn3s3cmsgq-fsbi9cje9m.gz",
       "SourceId": "ParliamentInfrastructure",
       "SourceType": "Discovered",
@@ -1459,8 +1480,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "b9sayid5wm",
-      "Integrity": "j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=",
+      "Fingerprint": "v6xxc2o7l9",
+      "Integrity": "RzqnVp7RtEUOGsr3rzBs7sZyLU6avx9OmyNVMErdmXg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2495,6 +2516,27 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
+      "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\abstract.svg",
+      "SourceId": "ParliamentInfrastructure",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\",
+      "BasePath": "_content/ParliamentInfrastructure",
+      "RelativePath": "lib/images/abstract#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5ssondd4fw",
+      "Integrity": "tULVDMhe9EhaD16l4kT2zxbNLTyf7cr3A1hEDceM7W8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\images\\abstract.svg"
+    },
+    {
       "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "ParliamentInfrastructure",
       "SourceType": "Discovered",
@@ -2812,13 +2854,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.b9sayid5wm.css",
-      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\b40hvymxwo-b9sayid5wm.gz",
+      "Route": "css/site.css",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\b40hvymxwo-v6xxc2o7l9.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003125000000"
+          "Quality": "0.002941176471"
         }
       ],
       "ResponseHeaders": [
@@ -2828,19 +2870,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "319"
+          "Value": "339"
         },
         {
           "Name": "ETag",
-          "Value": "\"fNKkLSNFLZMVTc2zVrpMXQqOwPU3sU4GWcfEbCR2V1I=\""
+          "Value": "\"DQPLjn4e9d4lhBxFAI2FOOOXfZ7u3wPYS4+AITzgWNM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 13:34:07 GMT"
+          "Value": "Wed, 05 Mar 2025 12:52:04 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -2856,26 +2898,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "W/\"RzqnVp7RtEUOGsr3rzBs7sZyLU6avx9OmyNVMErdmXg=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "b9sayid5wm"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-RzqnVp7RtEUOGsr3rzBs7sZyLU6avx9OmyNVMErdmXg="
         }
       ]
     },
     {
-      "Route": "css/site.b9sayid5wm.css",
+      "Route": "css/site.css",
       "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2885,7 +2919,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "667"
+          "Value": "698"
         },
         {
           "Name": "Content-Type",
@@ -2893,11 +2927,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "\"RzqnVp7RtEUOGsr3rzBs7sZyLU6avx9OmyNVMErdmXg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 13:34:07 GMT"
+          "Value": "Wed, 05 Mar 2025 12:52:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RzqnVp7RtEUOGsr3rzBs7sZyLU6avx9OmyNVMErdmXg="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\b40hvymxwo-v6xxc2o7l9.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "339"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DQPLjn4e9d4lhBxFAI2FOOOXfZ7u3wPYS4+AITzgWNM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Mar 2025 12:52:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DQPLjn4e9d4lhBxFAI2FOOOXfZ7u3wPYS4+AITzgWNM="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.v6xxc2o7l9.css",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\b40hvymxwo-v6xxc2o7l9.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002941176471"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "339"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DQPLjn4e9d4lhBxFAI2FOOOXfZ7u3wPYS4+AITzgWNM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Mar 2025 12:52:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"RzqnVp7RtEUOGsr3rzBs7sZyLU6avx9OmyNVMErdmXg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v6xxc2o7l9"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RzqnVp7RtEUOGsr3rzBs7sZyLU6avx9OmyNVMErdmXg="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.v6xxc2o7l9.css",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "698"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RzqnVp7RtEUOGsr3rzBs7sZyLU6avx9OmyNVMErdmXg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Mar 2025 12:52:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2907,7 +3086,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "v6xxc2o7l9"
         },
         {
           "Name": "label",
@@ -2915,13 +3094,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-RzqnVp7RtEUOGsr3rzBs7sZyLU6avx9OmyNVMErdmXg="
         }
       ]
     },
     {
-      "Route": "css/site.b9sayid5wm.css.gz",
-      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\b40hvymxwo-b9sayid5wm.gz",
+      "Route": "css/site.v6xxc2o7l9.css.gz",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\b40hvymxwo-v6xxc2o7l9.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2930,7 +3109,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "319"
+          "Value": "339"
         },
         {
           "Name": "Content-Type",
@@ -2938,11 +3117,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fNKkLSNFLZMVTc2zVrpMXQqOwPU3sU4GWcfEbCR2V1I=\""
+          "Value": "\"DQPLjn4e9d4lhBxFAI2FOOOXfZ7u3wPYS4+AITzgWNM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 13:34:07 GMT"
+          "Value": "Wed, 05 Mar 2025 12:52:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2960,7 +3139,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "v6xxc2o7l9"
         },
         {
           "Name": "label",
@@ -2968,144 +3147,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-fNKkLSNFLZMVTc2zVrpMXQqOwPU3sU4GWcfEbCR2V1I="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css",
-      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\b40hvymxwo-b9sayid5wm.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.003125000000"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "319"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"fNKkLSNFLZMVTc2zVrpMXQqOwPU3sU4GWcfEbCR2V1I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 13:34:07 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css",
-      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "667"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 13:34:07 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css.gz",
-      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\b40hvymxwo-b9sayid5wm.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "319"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"fNKkLSNFLZMVTc2zVrpMXQqOwPU3sU4GWcfEbCR2V1I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 13:34:07 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-fNKkLSNFLZMVTc2zVrpMXQqOwPU3sU4GWcfEbCR2V1I="
+          "Value": "sha256-DQPLjn4e9d4lhBxFAI2FOOOXfZ7u3wPYS4+AITzgWNM="
         }
       ]
     },
@@ -17492,6 +17534,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-ZH6pA6BSx6fuHZvdaKph1DwUJ+VSYilIiEQu8ilnvqk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/abstract.5ssondd4fw.svg",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\rsfclybc4x-5ssondd4fw.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000651890482"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1533"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jDabPeNOhIbYJIwUkDHcnQPyRIubN5cH/n0v1Bp9QDo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Mar 2025 17:38:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"tULVDMhe9EhaD16l4kT2zxbNLTyf7cr3A1hEDceM7W8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5ssondd4fw"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/images/abstract.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tULVDMhe9EhaD16l4kT2zxbNLTyf7cr3A1hEDceM7W8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/abstract.5ssondd4fw.svg",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\abstract.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tULVDMhe9EhaD16l4kT2zxbNLTyf7cr3A1hEDceM7W8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Mar 2025 17:38:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5ssondd4fw"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/images/abstract.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tULVDMhe9EhaD16l4kT2zxbNLTyf7cr3A1hEDceM7W8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/abstract.5ssondd4fw.svg.gz",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\rsfclybc4x-5ssondd4fw.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1533"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jDabPeNOhIbYJIwUkDHcnQPyRIubN5cH/n0v1Bp9QDo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Mar 2025 17:38:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5ssondd4fw"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/images/abstract.svg.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jDabPeNOhIbYJIwUkDHcnQPyRIubN5cH/n0v1Bp9QDo="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/abstract.svg",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\rsfclybc4x-5ssondd4fw.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000651890482"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1533"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jDabPeNOhIbYJIwUkDHcnQPyRIubN5cH/n0v1Bp9QDo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Mar 2025 17:38:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"tULVDMhe9EhaD16l4kT2zxbNLTyf7cr3A1hEDceM7W8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tULVDMhe9EhaD16l4kT2zxbNLTyf7cr3A1hEDceM7W8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/abstract.svg",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\abstract.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tULVDMhe9EhaD16l4kT2zxbNLTyf7cr3A1hEDceM7W8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Mar 2025 17:38:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tULVDMhe9EhaD16l4kT2zxbNLTyf7cr3A1hEDceM7W8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/abstract.svg.gz",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\rsfclybc4x-5ssondd4fw.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1533"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jDabPeNOhIbYJIwUkDHcnQPyRIubN5cH/n0v1Bp9QDo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Mar 2025 17:38:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jDabPeNOhIbYJIwUkDHcnQPyRIubN5cH/n0v1Bp9QDo="
         }
       ]
     },

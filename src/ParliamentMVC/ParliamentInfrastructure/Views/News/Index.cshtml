@@ -7,41 +7,44 @@
 <h1>Новини</h1>
 
 <p>
-    <a asp-action="Create">Створити новину</a>
+    <div class="container">
+        <a asp-action="Create" class="btn btn-primary">Створити новину</a>
+    </div>
 </p>
-<table class="table table-hover">
-    <thead>
-        <tr class="table-secondary">
-            <th scope="col">
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th scope="col">
-                @Html.DisplayNameFor(model => model.PublicationDate)
-            </th>
-            <th scope="col">
-                @Html.DisplayNameFor(model => model.Department)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PublicationDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Department.Name)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Змінити</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Детальніше</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Видалити</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<hr/>
+<section id="content-types">
+    <div class="container">
+        <div class="row justify-content-center">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="card" style="width: 40rem;">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    @Html.DisplayFor(modelItem => item.Title)
+                                </h4>
+                            </div>
+                            <div class="card-footer">
+                                <div class="badges">
+                                    <span class="badge bg-warning">
+                                        @Html.DisplayFor(modelItem => item.Department.Name)
+                                    </span>
+                                </div>
+                                <div class="container d-flex justify-content-between">
+                                    <span>
+                                        @Html.DisplayFor(modelItem => item.PublicationDate)
+                                    </span>
+                                    <a class="btn btn-light-primary" asp-action="Details" asp-route-id="@item.Id">
+                                        Читати
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</section>
