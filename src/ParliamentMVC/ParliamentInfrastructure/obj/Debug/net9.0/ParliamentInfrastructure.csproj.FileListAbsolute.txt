@@ -204,7 +204,6 @@ D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\o
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.ParliamentInfrastructure.props
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.ParliamentInfrastructure.props
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\staticwebassets.pack.json
-D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\Parliame.926F1941.Up2Date
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\ParliamentInfrastructure.dll
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\refint\ParliamentInfrastructure.dll
@@ -350,3 +349,4 @@ D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\o
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\compressed\k6zdoh4kgq-p88v6lhq36.gz
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\compressed\rsfclybc4x-5ssondd4fw.gz
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\compressed\b40hvymxwo-v6xxc2o7l9.gz
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

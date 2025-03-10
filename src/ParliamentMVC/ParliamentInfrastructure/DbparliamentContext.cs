@@ -32,85 +32,91 @@ public partial class DbparliamentContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Contact>(entity =>
-        {
-            entity.Property(e => e.Email)
-                .HasMaxLength(255)
-                .IsUnicode(false);
-            entity.Property(e => e.InstagramLink).HasMaxLength(255);
-            entity.Property(e => e.Phone)
-                .HasMaxLength(15)
-                .IsUnicode(false);
-        });
+        modelBuilder.Entity<Event>()
+        .HasOne(e => e.Department)
+        .WithMany(d => d.Events)
+        .HasForeignKey(e => e.DepartmentId)
+        .OnDelete(DeleteBehavior.Cascade);
+        //modelBuilder.Entity<Contact>(entity =>
+        //{
+        //    entity.Property(e => e.Email)
+        //        .HasMaxLength(255)
+        //        .IsUnicode(false);
+        //    entity.Property(e => e.InstagramLink).HasMaxLength(255);
+        //    entity.Property(e => e.Phone)
+        //        .HasMaxLength(15)
+        //        .IsUnicode(false);
+        //});
 
-        modelBuilder.Entity<Department>(entity =>
-        {
-            entity.Property(e => e.Name).HasMaxLength(255);
+        //modelBuilder.Entity<Department>(entity =>
+        //{
+        //    entity.Property(e => e.Name).HasMaxLength(255);
 
-            entity.HasOne(d => d.Contact).WithMany(p => p.Departments)
-                .HasForeignKey(d => d.ContactId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Departments_Contacts");
-        });
+        //    entity.HasOne(d => d.Contact).WithMany(p => p.Departments)
+        //        .HasForeignKey(d => d.ContactId)
+        //        .OnDelete(DeleteBehavior.ClientSetNull)
+        //        .HasConstraintName("FK_Departments_Contacts");
+        //});
 
-        modelBuilder.Entity<Event>(entity =>
-        {
-            entity.Property(e => e.AccessType).HasMaxLength(50);
-            entity.Property(e => e.EndDate).HasColumnType("datetime");
-            entity.Property(e => e.StartDate).HasColumnType("datetime");
-            entity.Property(e => e.Title).HasMaxLength(255);
+        //modelBuilder.Entity<Event>(entity =>
+        //{
+        //    entity.Property(e => e.AccessType).HasMaxLength(50);
+        //    entity.Property(e => e.EndDate).HasColumnType("datetime");
+        //    entity.Property(e => e.StartDate).HasColumnType("datetime");
+        //    entity.Property(e => e.Title).HasMaxLength(255);
 
-            entity.HasOne(d => d.Department).WithMany(p => p.Events)
-                .HasForeignKey(d => d.DepartmentId)
-                .HasConstraintName("FK_Events_Departments");
+        //    entity.HasOne(d => d.Department).WithMany(p => p.Events)
+        //        .HasForeignKey(d => d.DepartmentId)
+        //        .OnDelete(DeleteBehavior.Cascade)
+        //        .HasConstraintName("FK_Events_Departments");
 
-            entity.HasOne(d => d.Location).WithMany(p => p.Events)
-                .HasForeignKey(d => d.LocationId)
-                .HasConstraintName("FK_Events_Locations");
-        });
+        //    entity.HasOne(d => d.Location).WithMany(p => p.Events)
+        //        .HasForeignKey(d => d.LocationId)
+        //        .HasConstraintName("FK_Events_Locations");
+        //});
 
-        modelBuilder.Entity<Location>(entity =>
-        {
-            entity.HasOne(d => d.Contact).WithMany(p => p.Locations)
-                .HasForeignKey(d => d.ContactId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Locations_Contacts");
-        });
+        //modelBuilder.Entity<Location>(entity =>
+        //{
+        //    entity.HasOne(d => d.Contact).WithMany(p => p.Locations)
+        //        .HasForeignKey(d => d.ContactId)
+        //        .OnDelete(DeleteBehavior.ClientSetNull)
+        //        .HasConstraintName("FK_Locations_Contacts");
+        //});
 
-        modelBuilder.Entity<News>(entity =>
-        {
-            entity.Property(e => e.PublicationDate).HasColumnType("datetime");
-            entity.Property(e => e.Title).HasMaxLength(255);
+        //modelBuilder.Entity<News>(entity =>
+        //{
+        //    entity.Property(e => e.PublicationDate).HasColumnType("datetime");
+        //    entity.Property(e => e.Title).HasMaxLength(255);
 
-            entity.HasOne(d => d.Department).WithMany(p => p.News)
-                .HasForeignKey(d => d.DepartmentId)
-                .HasConstraintName("FK_News_Departments");
-        });
+        //    entity.HasOne(d => d.Department).WithMany(p => p.News)
+        //        .HasForeignKey(d => d.DepartmentId)
+        //        .HasConstraintName("FK_News_Departments");
+        //});
 
-        modelBuilder.Entity<UsersDepartment>(entity =>
-        {
-            entity.HasNoKey();
+        //modelBuilder.Entity<UsersDepartment>(entity =>
+        //{
+        //    entity.HasNoKey();
 
-            entity.Property(e => e.Position).HasMaxLength(50);
-        });
+        //    entity.Property(e => e.Position).HasMaxLength(50);
+        //});
 
-        modelBuilder.Entity<UsersEventsRating>(entity =>
-        {
-            entity
-                .HasNoKey()
-                .ToTable("UsersEventsRating");
-        });
+        //modelBuilder.Entity<UsersEventsRating>(entity =>
+        //{
+        //    entity
+        //        .HasNoKey()
+        //        .ToTable("UsersEventsRating");
+        //});
 
-        modelBuilder.Entity<UsersEventsRole>(entity =>
-        {
-            entity
-                .HasNoKey()
-                .ToTable("UsersEventsRole");
+        //modelBuilder.Entity<UsersEventsRole>(entity =>
+        //{
+        //    entity
+        //        .HasNoKey()
+        //        .ToTable("UsersEventsRole");
 
-            entity.HasIndex(e => e.UserId, "IX_UsersEvents");
+        //    entity.HasIndex(e => e.UserId, "IX_UsersEvents");
 
-            entity.Property(e => e.Role).HasMaxLength(50);
-        });
+        //    entity.Property(e => e.Role).HasMaxLength(50);
+        //});
 
         OnModelCreatingPartial(modelBuilder);
     }
