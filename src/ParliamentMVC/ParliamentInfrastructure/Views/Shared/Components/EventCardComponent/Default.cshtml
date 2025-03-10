@@ -1,0 +1,37 @@
+﻿@model ParliamentInfrastructure.Models.EventCardModel
+
+<div class="card" style="width: 80rem;">
+    <div class="card-content">
+        <div class="card-body">
+            <h4 class="card-title"> @Model.Title </h4>
+        </div>
+        <div class="card-footer">
+            <div class="badges">
+                <span class="badge bg-warning">
+                    @Model.Department
+                </span>
+            </div>
+            <p/>
+            <div>
+                <h5> Хто може прийти: </h5>
+                <p class="text-subtitle text-muted"> @Model.AccessType </p>
+            </div>
+            <div class="container d-flex justify-content-between">
+                <span>
+                    @Model.StartTime.ToString()
+                </span>
+                <div class="btn-group btn-group-large">
+                    <a class="btn btn-light-primary" asp-controller="Events" asp-action="Details" asp-route-id="@Model.Id">
+                        Детальніше
+                    </a>
+                    <a class="btn btn-primary">
+                        Хочу піти
+                    </a>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+

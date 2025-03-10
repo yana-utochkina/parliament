@@ -18,19 +18,19 @@
             @Html.DisplayNameFor(model => model.Contact.Email)
         </dt>
         <dd class = "col-sm-10">
-            <a asp-controller = "Contacts" asp-action = "Details" asp-route-id = "@Model?.ContactId">@Html.DisplayFor(model => model.Contact.Email)</a>
+            <a class="badge bg-success" asp-controller = "Contacts" asp-action = "Details" asp-route-id = "@Model?.ContactId">@Html.DisplayFor(model => model.Contact.Email)</a>
         </dd>
         <dt class = "col-sm-2">
             Новини департаменту
         </dt>
         <dd class = "col-sm-10">
-            <a asp-controller = "News" asp-action = "Index" asp-route-departmentId = "@Model?.Id">Переглянути</a>
+            <a class="badge bg-info" asp-controller="News" asp-action="Index" asp-route-departmentId="@Model?.Id">Переглянути</a>
         </dd>
         <dt class="col-sm-2">
             Події від департаменту
         </dt>
         <dd class="col-sm-10">
-            <a asp-controller="Events" asp-action="Index" asp-route-departmentId="@Model?.Id">Переглянути</a>
+            <a class="badge bg-info" asp-controller="Events" asp-action="Index" asp-route-departmentId="@Model?.Id">Переглянути</a>
         </dd>
     </dl>
     <div class="row">
@@ -90,4 +90,5 @@
             </div>
         </div>
     </div>
+    <a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>
 </div>

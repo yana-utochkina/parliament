@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<ParliamentDomain.Model.Event>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Events";
 }
 
 <h1>Усі події</h1>
@@ -12,37 +12,15 @@
     </div>
 </p>
 <hr/>
-<table class="table table-hover">
-    <thead>
-        <tr class="table-secondary">
-            <th scope="col">
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th scope="col">
-                @Html.DisplayNameFor(model => model.StartDate)
-            </th>
-            <th scope="col">
-                @Html.DisplayNameFor(model => model.Department)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StartDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Department.Name)
-            </td>
-            <td>
-                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Детальніше</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<section id="content-types">
+    <div class="container">
+        <div class="row justify-content-center">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-10 d-flex justify-content-center">
+                    @await Component.InvokeAsync("EventCardComponent", new EventCardModel(item.Id, item.Title, item.Department.Name, item.AccessType, item.StartDate))
+                </div>
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+﻿@model ParliamentInfrastructure.Models.NewsCardModel
+
+<div class="card" style="width: 40rem;">
+    <div class="card-content">
+        <div class="card-body">
+            <h4 class="card-title"> @Model.Title </h4>
+        </div>
+        <div class="card-footer">
+            <div class="badges">
+                <span class="badge bg-warning">
+                    @Model.Department
+                </span>
+            </div>
+            <p/>
+            <div class="container d-flex justify-content-between">
+                <span> 
+                    @Model.PublicationDate.ToShortDateString()
+                </span>
+                <a class="btn btn-light-primary" asp-controller="News" asp-action="Details" asp-route-id="@Model.Id">
+                    Читати
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+

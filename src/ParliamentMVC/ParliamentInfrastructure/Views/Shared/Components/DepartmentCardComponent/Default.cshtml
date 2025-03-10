@@ -1,0 +1,23 @@
+﻿@model ParliamentInfrastructure.Models.DepartmentCardModel
+
+<div class="card" style="width: 80rem;">
+    <div class="card-content">
+        <div class="card-body">
+            <h4 class="card-title"> @Model.Name </h4>
+        </div>
+        <div class="card-footer">
+            <div class="container d-flex justify-content-between">
+                <a class="btn btn-outline-info" asp-controller="Events" asp-action="Index" asp-route-departmentId="@Model.Id">
+                    Переглянути події
+                </a>
+                <a class="btn btn-outline-info" asp-controller="News" asp-action="Index" asp-route-departmentId="@Model.Id">
+                    Переглянути новини
+                </a>
+                <a class="btn btn-primary" asp-controller="Departments" asp-action="Details" asp-route-id="@Model.Id">
+                    Детальніше
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+

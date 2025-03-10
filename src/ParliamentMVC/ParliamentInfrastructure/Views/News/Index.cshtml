@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<ParliamentDomain.Model.News>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "News";
 }
 
 <h1>Новини</h1>
@@ -18,30 +18,7 @@
             @foreach (var item in Model)
             {
                 <div class="col-md-4 d-flex justify-content-center">
-                    <div class="card" style="width: 40rem;">
-                        <div class="card-content">
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    @Html.DisplayFor(modelItem => item.Title)
-                                </h4>
-                            </div>
-                            <div class="card-footer">
-                                <div class="badges">
-                                    <span class="badge bg-warning">
-                                        @Html.DisplayFor(modelItem => item.Department.Name)
-                                    </span>
-                                </div>
-                                <div class="container d-flex justify-content-between">
-                                    <span>
-                                        @Html.DisplayFor(modelItem => item.PublicationDate)
-                                    </span>
-                                    <a class="btn btn-light-primary" asp-action="Details" asp-route-id="@item.Id">
-                                        Читати
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @await Component.InvokeAsync("NewsCardComponent", new NewsCardModel(item.Id, item.Title, item.Department.Name, item.PublicationDate))
                 </div>
             }
         </div>

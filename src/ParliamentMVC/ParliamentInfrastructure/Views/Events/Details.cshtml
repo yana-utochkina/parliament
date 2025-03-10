@@ -18,7 +18,7 @@
             @Html.DisplayNameFor(model => model.Department)
         </dt>
         <dd class="col-sm-10">
-            <a asp-controller="Departments" asp-action="Details" asp-route-id="@Model?.DepartmentId">@Html.DisplayFor(model => model.Department.Name)</a>
+            <a class="badge bg-warning" asp-controller="Departments" asp-action="Details" asp-route-id="@Model?.DepartmentId">@Html.DisplayFor(model => model.Department.Name)</a>
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.AccessType)
@@ -42,12 +42,13 @@
             @Html.DisplayNameFor(model => model.Location)
         </dt>
         <dd class = "col-sm-10">
-            <a asp-controller = "Locations" asp-action = "Details" asp-route-id = "@Model?.LocationId">@Html.DisplayFor(model => model.Location.Address)</a>
+            <a class="badge bg-info" asp-controller="Locations" asp-action="Details" asp-route-id="@Model?.LocationId">@Html.DisplayFor(model => model.Location.Address)</a>
         </dd>
     </dl>
     <hr/>
     <div>
         @Html.Raw(Model.Description)
     </div>
+    <a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>
 </div>
 

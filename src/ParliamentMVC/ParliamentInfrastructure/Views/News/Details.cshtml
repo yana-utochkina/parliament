@@ -11,14 +11,14 @@
     <hr />
     <div class="btn-group mb-2">
         <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Змінити</a>
-        <a asp-action="Index" class="btn btn-secondary">Повернутися до переліку</a>
+        <a asp-action="Index" class="btn btn-secondary">До усіх новин</a>
     </div>
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Department)
         </dt>
         <dd class="col-sm-10">
-            <a asp-controller="Departments" asp-action="Details" asp-route-id="@Model?.DepartmentId">
+            <a class="badge bg-warning" asp-controller="Departments" asp-action="Details" asp-route-id="@Model?.DepartmentId">
                 @Html.DisplayFor(model => model.Department.Name)
             </a>
         </dd>
@@ -29,8 +29,10 @@
             @Html.DisplayFor(model => model.PublicationDate)
         </dd>
     </dl>
+    <hr />
     <div>
         @Html.Raw(Model.Description)
     </div>
+    <a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>
 </div>
 

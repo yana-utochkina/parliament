@@ -4,12 +4,11 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Створити</h1>
-
-<h4>Департамент</h4>
+<h3>Створити департамент</h3>
 <hr />
+
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-10">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -18,23 +17,23 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="ContactId" class="control-label"></label>
+                <select asp-for="ContactId" class="form-control" asp-items="ViewBag.ContactId"></select>
+            </div>
+            <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <textarea rows="20" asp-for="Description" class="form-control"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="ContactId" class="control-label"></label>
-                <select asp-for="ContactId" class ="form-control" asp-items="ViewBag.ContactId"></select>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Створити" class="btn btn-primary" />
+            <div class="col-sm-12 d-flex justify-content-end">
+                <input type="submit" value="Створити" class="btn right btn-primary " />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Повернутися до переліку</a>
+    <a asp-action="Index" class="btn btn-outline-danger">Назад до переліку</a>
 </div>
 
 @section Scripts {

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<ParliamentDomain.Model.Location>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Locations";
 }
 
 <h1>Місця</h1>
@@ -18,12 +18,6 @@
             <th scope="col">
                 @Html.DisplayNameFor(model => model.Address)
             </th>
-            <th scope="col">
-                @Html.DisplayNameFor(model => model.GoogleMapsLink)
-            </th>
-            <th scope="col">
-                @Html.DisplayNameFor(model => model.Contact)
-            </thscope>
             <th></th>
         </tr>
     </thead>
@@ -34,15 +28,7 @@
                 @Html.DisplayFor(modelItem => item.Address)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.GoogleMapsLink)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Contact.Email)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Змінити</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Детальніше</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Видалити</a>
+                <a class="btn btn-outline-primary" asp-action="Details" asp-route-id="@item.Id">Детальніше</a>
             </td>
         </tr>
 }
