@@ -1,5 +1,8 @@
 using ParliamentInfrastructure;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using ParliamentInfrastructure.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +19,14 @@ builder.Services.AddDbContext<DbparliamentContext>(option => option.UseSqlServer
     builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 
+builder.Services.AddDbContext<IdentityContext>(option => option.UseSqlServer(
+    builder.Configuration.GetConnectionString("IdentityConnection")
+    ));
+
+builder.Services.AddControllersWithViews();
+
+builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -27,6 +38,9 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
+
 app.UseRouting();
 
 app.UseAuthorization();

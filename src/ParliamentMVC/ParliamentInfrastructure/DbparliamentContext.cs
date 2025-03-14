@@ -37,6 +37,7 @@ public partial class DbparliamentContext : DbContext
         .WithMany(d => d.Events)
         .HasForeignKey(e => e.DepartmentId)
         .OnDelete(DeleteBehavior.Cascade);
+
         //modelBuilder.Entity<Contact>(entity =>
         //{
         //    entity.Property(e => e.Email)

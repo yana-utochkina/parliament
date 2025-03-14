@@ -1,6 +1,6 @@
 ﻿namespace ParliamentInfrastructure.Models
 {
-    public class EventCardModel
+    public class EventCardViewModel
     {
         public int Id { get; set; }
         public string Title { get; set; }
@@ -8,7 +8,7 @@
         public string AccessType { get; set; }
         public DateTime StartTime { get; set; }
 
-        public EventCardModel(int Id, string Title, string Department, string AccessType, DateTime StartTime)
+        public EventCardViewModel(int Id, string Title, string Department, string AccessType, DateTime StartTime)
         {
             this.Id = Id;
             this.Title = Title;

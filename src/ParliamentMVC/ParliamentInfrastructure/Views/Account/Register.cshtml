@@ -1,0 +1,37 @@
+﻿@model ParliamentInfrastructure.ViewModels.RegisterViewModel
+
+<h2>Реєстрація</h2>
+
+<form method="post" asp-controller="Account" asp-action="Register">
+	<div>
+		<label asp-for="Email"></label><br/>
+		<input asp-for="Email" />
+		<span asp-validation-for="Email"></span>
+	</div>
+	<div>
+		<label asp-for="Password"></label><br/>
+		<input asp-for="Password"/>
+		<span asp-validation-for="Password"></span>
+	</div>
+	<div>
+		<label asp-for="PasswordConfirm"></label><br />
+		<input asp-for="PasswordConfirm" />
+		<span asp-validation-for="PasswordConfirm"></span>
+	</div>
+	<div>
+		<label asp-for="FullName"></label><br/>
+		<input asp-for="FullName" />
+		<span asp-validation-for="FullName"></span>
+	</div>
+	<div>
+		<label asp-for="University"></label><br/>
+		<input asp-for="University"/>
+	</div>
+	<div>
+		<label asp-for="Faculty"></label><br/>
+		<input asp-for="Faculty" />
+	</div>
+	<div>
+		<input type="submit" value="Реєстрація"/>
+	</div>
+</form>
