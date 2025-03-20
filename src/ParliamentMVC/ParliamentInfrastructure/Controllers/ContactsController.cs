@@ -6,9 +6,9 @@ namespace ParliamentInfrastructure.Controllers
 {
     public class ContactsController : Controller
     {
-        private readonly DbparliamentContext _context;
+        private readonly ParliamentDbContext _context;
 
-        public ContactsController(DbparliamentContext context)
+        public ContactsController(ParliamentDbContext context)
         {
             _context = context;
         }

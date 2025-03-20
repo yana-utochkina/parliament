@@ -3,13 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ParliamentInfrastructure;
 
-public partial class DbparliamentContext : DbContext
+public partial class ParliamentDbContext : DbContext
 {
-    public DbparliamentContext()
+    public ParliamentDbContext()
     {
     }
 
-    public DbparliamentContext(DbContextOptions<DbparliamentContext> options)
+    public ParliamentDbContext(DbContextOptions<ParliamentDbContext> options)
         : base(options)
     {
     }

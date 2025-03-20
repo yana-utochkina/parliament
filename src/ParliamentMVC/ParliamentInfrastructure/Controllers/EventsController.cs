@@ -7,9 +7,9 @@ namespace ParliamentInfrastructure.Controllers
 {
     public class EventsController : Controller
     {
-        private readonly DbparliamentContext _context;
+        private readonly ParliamentDbContext _context;
 
-        public EventsController(DbparliamentContext context)
+        public EventsController(ParliamentDbContext context)
         {
             _context = context;
         }

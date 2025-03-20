@@ -7,9 +7,9 @@ namespace ParliamentInfrastructure.Controllers
 {
     public class DepartmentsController : Controller
     {
-        private readonly DbparliamentContext _context;
+        private readonly ParliamentDbContext _context;
 
-        public DepartmentsController(DbparliamentContext context)
+        public DepartmentsController(ParliamentDbContext context)
         {
             _context = context;
         }

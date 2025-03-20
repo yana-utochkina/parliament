@@ -15,7 +15,7 @@ builder.Services.AddControllersWithViews()
         options.ViewLocationFormats.Add("/{0}.cshtml");
     });
 
-builder.Services.AddDbContext<DbparliamentContext>(option => option.UseSqlServer(
+builder.Services.AddDbContext<ParliamentDbContext>(option => option.UseSqlServer(
     builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 
