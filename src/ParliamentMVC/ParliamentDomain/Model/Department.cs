@@ -11,17 +11,18 @@ public partial class Department : Entity
     [Display(Name="Інформація про департамент")]
     public string? Description { get; set; }
 
-    [Display(Name="Електронна пошта")]
+    [Display(Name = "Електронна пошта")]
     [Required(ErrorMessage = "Поле не повинно бути порожнім")]
     public int ContactId { get; set; }
 
     [Display(Name = "Контакт")]
-    [Required(ErrorMessage = "Поле не повинно бути порожнім")]
     public virtual Contact Contact { get; set; } = null!;
 
     [Display(Name = "Події")]
-    public virtual ICollection<Event> Events { get; set; } = new List<Event>();
+    public virtual List<Event> Events { get; set; } = new List<Event>();
 
     [Display(Name = "Новини")]
-    public virtual ICollection<News> News { get; set; } = new List<News>();
+    public virtual List<News> News { get; set; } = new List<News>();
+
+    public virtual List<UserDepartmentDetail> UserDepartmentDetails { get; set; } = new List<UserDepartmentDetail>();
 }

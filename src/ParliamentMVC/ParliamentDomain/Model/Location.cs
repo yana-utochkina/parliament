@@ -4,9 +4,12 @@ namespace ParliamentDomain.Model;
 
 public partial class Location : Entity
 {
+    [Display(Name = "Назва")]
+    public string? Name { get; set; }
+
     [Display(Name = "Адреса")]
     [Required(ErrorMessage = "Поле не повинно бути порожнім")]
-    public string Address { get; set; } = null!;
+    public string Address { get; set; }
 
     [Display(Name = "Електронна пошта")]
     [Required(ErrorMessage = "Поле не повинно бути порожнім")]
@@ -15,7 +18,7 @@ public partial class Location : Entity
     [Display(Name = "Посилання на GoogleMaps")]
     public string? GoogleMapsLink { get; set; }
 
-    [Display(Name = "Електронна пошта")]
+    [Display(Name = "Контакт")]
     public virtual Contact Contact { get; set; } = null!;
 
     [Display(Name = "Події")]

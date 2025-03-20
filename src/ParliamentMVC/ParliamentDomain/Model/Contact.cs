@@ -14,9 +14,12 @@ public partial class Contact : Entity
     [Display(Name = "Посилання на інстаграм")]
     public string? InstagramLink { get; set; }
 
+    [Display(Name = "Посилання на телеграм")]
+    public string? TelegramLink { get; set; }
+
     [Display(Name = "Департаменти")]
     public virtual ICollection<Department> Departments { get; set; } = new List<Department>();
 
-    [Display(Name = "Локації")]
+    [Display(Name = "Місця")]
     public virtual ICollection<Location> Locations { get; set; } = new List<Location>();
 }

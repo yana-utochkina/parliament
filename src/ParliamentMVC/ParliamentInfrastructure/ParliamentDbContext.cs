@@ -5,9 +5,6 @@ namespace ParliamentInfrastructure;
 
 public partial class ParliamentDbContext : DbContext
 {
-    public ParliamentDbContext()
-    {
-    }
 
     public ParliamentDbContext(DbContextOptions<ParliamentDbContext> options)
         : base(options)
@@ -24,100 +21,106 @@ public partial class ParliamentDbContext : DbContext
 
     public virtual DbSet<News> News { get; set; }
 
-    public virtual DbSet<UsersDepartment> UsersDepartments { get; set; }
+    public virtual DbSet<UserDepartmentDetail> UserDepartmentDetail { get; set; }
 
-    public virtual DbSet<UsersEventsRating> UsersEventsRatings { get; set; }
+    public virtual DbSet<UserEventDetail> UserEventDetails { get; set; }
 
-    public virtual DbSet<UsersEventsRole> UsersEventsRoles { get; set; }
+    public virtual DbSet<User> Users {  get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Event>()
-        .HasOne(e => e.Department)
-        .WithMany(d => d.Events)
-        .HasForeignKey(e => e.DepartmentId)
-        .OnDelete(DeleteBehavior.Cascade);
+        modelBuilder.Entity<Contact>(entity =>
+        {
+            entity.Property(e => e.Email)
+                .HasMaxLength(255)
+                .IsUnicode(false);
+            entity.Property(e => e.InstagramLink).HasMaxLength(255);
+            entity.Property(e => e.TelegramLink).HasMaxLength(255);
+            entity.Property(e => e.Phone)
+                .HasMaxLength(15)
+                .IsUnicode(false);
+        });
 
-        //modelBuilder.Entity<Contact>(entity =>
-        //{
-        //    entity.Property(e => e.Email)
-        //        .HasMaxLength(255)
-        //        .IsUnicode(false);
-        //    entity.Property(e => e.InstagramLink).HasMaxLength(255);
-        //    entity.Property(e => e.Phone)
-        //        .HasMaxLength(15)
-        //        .IsUnicode(false);
-        //});
+        modelBuilder.Entity<Department>(entity =>
+        {
+            entity.Property(e => e.Name).HasMaxLength(255);
 
-        //modelBuilder.Entity<Department>(entity =>
-        //{
-        //    entity.Property(e => e.Name).HasMaxLength(255);
+            entity.HasOne(d => d.Contact).WithMany(p => p.Departments)
+                .HasForeignKey(d => d.ContactId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Departments_Contacts");
+        });
 
-        //    entity.HasOne(d => d.Contact).WithMany(p => p.Departments)
-        //        .HasForeignKey(d => d.ContactId)
-        //        .OnDelete(DeleteBehavior.ClientSetNull)
-        //        .HasConstraintName("FK_Departments_Contacts");
-        //});
+        modelBuilder.Entity<Event>(entity =>
+        {
+            entity.Property(e => e.AccessType).HasMaxLength(255);
+            entity.Property(e => e.EndDate).HasColumnType("datetime");
+            entity.Property(e => e.StartDate).HasColumnType("datetime");
+            entity.Property(e => e.Title).HasMaxLength(255);
 
-        //modelBuilder.Entity<Event>(entity =>
-        //{
-        //    entity.Property(e => e.AccessType).HasMaxLength(50);
-        //    entity.Property(e => e.EndDate).HasColumnType("datetime");
-        //    entity.Property(e => e.StartDate).HasColumnType("datetime");
-        //    entity.Property(e => e.Title).HasMaxLength(255);
+            entity.HasOne(d => d.Department).WithMany(p => p.Events)
+                .HasForeignKey(d => d.DepartmentId)
+                .OnDelete(DeleteBehavior.SetNull)
+                .HasConstraintName("FK_Events_Departments");
 
-        //    entity.HasOne(d => d.Department).WithMany(p => p.Events)
-        //        .HasForeignKey(d => d.DepartmentId)
-        //        .OnDelete(DeleteBehavior.Cascade)
-        //        .HasConstraintName("FK_Events_Departments");
+            entity.HasOne(d => d.Location).WithMany(p => p.Events)
+                .HasForeignKey(d => d.LocationId)
+                .OnDelete(DeleteBehavior.SetNull)
+                .HasConstraintName("FK_Events_Locations");
+        });
 
-        //    entity.HasOne(d => d.Location).WithMany(p => p.Events)
-        //        .HasForeignKey(d => d.LocationId)
-        //        .HasConstraintName("FK_Events_Locations");
-        //});
+        modelBuilder.Entity<Location>(entity =>
+        {
+            entity.HasOne(d => d.Contact).WithMany(p => p.Locations)
+                .HasForeignKey(d => d.ContactId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Locations_Contacts");
+        });
 
-        //modelBuilder.Entity<Location>(entity =>
-        //{
-        //    entity.HasOne(d => d.Contact).WithMany(p => p.Locations)
-        //        .HasForeignKey(d => d.ContactId)
-        //        .OnDelete(DeleteBehavior.ClientSetNull)
-        //        .HasConstraintName("FK_Locations_Contacts");
-        //});
+        modelBuilder.Entity<News>(entity =>
+        {
+            entity.Property(e => e.PublicationDate).HasColumnType("datetime");
+            entity.Property(e => e.Title).HasMaxLength(255);
+            entity.Property(e => e.ShortDescription).HasMaxLength(255);
 
-        //modelBuilder.Entity<News>(entity =>
-        //{
-        //    entity.Property(e => e.PublicationDate).HasColumnType("datetime");
-        //    entity.Property(e => e.Title).HasMaxLength(255);
+            entity.HasOne(d => d.Department).WithMany(p => p.News)
+                .HasForeignKey(d => d.DepartmentId)
+                .OnDelete(DeleteBehavior.SetNull)
+                .HasConstraintName("FK_News_Departments");
+        });
 
-        //    entity.HasOne(d => d.Department).WithMany(p => p.News)
-        //        .HasForeignKey(d => d.DepartmentId)
-        //        .HasConstraintName("FK_News_Departments");
-        //});
+        modelBuilder.Entity<UserDepartmentDetail>(entity =>
+        {
+            entity.HasKey(e => new { e.WorkerId, e.DepartmentId});
+            entity.Property(e => e.Position).HasMaxLength(50);
+            entity.Property(e => e.JoinedAt).HasDefaultValueSql("CONVERT(DATE, GETDATE())");
 
-        //modelBuilder.Entity<UsersDepartment>(entity =>
-        //{
-        //    entity.HasNoKey();
+            entity.HasOne(u => u.User).WithMany(ud => ud.UserDepartmentDetails)
+                .HasForeignKey(u => u.WorkerId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_UserDepartmentDetails_Users");
 
-        //    entity.Property(e => e.Position).HasMaxLength(50);
-        //});
+            entity.HasOne(d => d.Department).WithMany(ud => ud.UserDepartmentDetails)
+                .HasForeignKey(u => u.DepartmentId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_UserDepartmentDetails_Departments");
+        });
 
-        //modelBuilder.Entity<UsersEventsRating>(entity =>
-        //{
-        //    entity
-        //        .HasNoKey()
-        //        .ToTable("UsersEventsRating");
-        //});
+        modelBuilder.Entity<UserEventDetail>(entity =>
+        {
+            entity.HasKey(e => new { e.UserId, e.EventId });
 
-        //modelBuilder.Entity<UsersEventsRole>(entity =>
-        //{
-        //    entity
-        //        .HasNoKey()
-        //        .ToTable("UsersEventsRole");
+            entity.HasOne(u => u.User).WithMany(ud => ud.UserEventDetails)
+                .HasForeignKey(u => u.UserId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_UserEventDetails_Users");
 
-        //    entity.HasIndex(e => e.UserId, "IX_UsersEvents");
-
-        //    entity.Property(e => e.Role).HasMaxLength(50);
-        //});
+            entity.HasOne(e => e.Event).WithMany(ud => ud.UserEventDetails)
+                .HasForeignKey(u => u.EventId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_UserEventDetails_Events");
+        });
 
         OnModelCreatingPartial(modelBuilder);
     }
