@@ -11,7 +11,7 @@ public partial class Location : Entity
     [Required(ErrorMessage = "Поле не повинно бути порожнім")]
     public string Address { get; set; }
 
-    [Display(Name = "Електронна пошта")]
+    [Display(Name = "Контакт")]
     [Required(ErrorMessage = "Поле не повинно бути порожнім")]
     public int ContactId { get; set; }
 

@@ -4,39 +4,52 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Зміна</h1>
+<h3>Змінити локацію</h3>
 
-<h4>Місце</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-8">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" placeholder="Введіть коротку назву" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
+                <small class="text-danger">*</small>
+                <input asp-for="Address" class="form-control" placeholder="Введіть повну адресу" />
                 <span asp-validation-for="Address" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ContactId" class="control-label"></label>
-                <select asp-for="ContactId" class="form-control" asp-items="ViewBag.ContactId"></select>
-                <span asp-validation-for="ContactId" class="text-danger"></span>
+                <small class="text-danger">*</small>
+                <small class="text-muted"><i>Оберіть наявний або створіть новий</i></small>
+                <div class="row">
+                    <div class="col-md-8">
+                        <select asp-for="ContactId" class="form-control" asp-items="ViewBag.ContactId"></select>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="btn btn-outline-secondary" asp-controller="Contacts" asp-action="Create" target="_blank">Створити новий контакт</a>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <label asp-for="GoogleMapsLink" class="control-label"></label>
-                <input asp-for="GoogleMapsLink" class="form-control" />
+                <input asp-for="GoogleMapsLink" class="form-control"/>
                 <span asp-validation-for="GoogleMapsLink" class="text-danger"></span>
             </div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <input type="submit" value="Зберегти" class="btn btn-primary" />
+                <input class="btn btn-primary" type="submit" value="Зберегти" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Повернутися до переліку</a>
+    <a class="btn btn-outline-danger" href="javascript:void(0);" onclick="window.history.back();">Повернутися</a>
 </div>
 
 @section Scripts {

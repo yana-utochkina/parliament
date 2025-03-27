@@ -16,6 +16,9 @@
     <thead>
         <tr class="table-secondary">
             <th scope="col">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.Address)
             </th>
             <th></th>
@@ -24,6 +27,9 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Address)
             </td>

@@ -3,48 +3,45 @@
 @{
     ViewData["Title"] = "Details";
 }
-
-<h1>Деталі</h1>
-
-<div>
-    <h4>Місце</h4>
-    <hr />
-    <div class="btn-group mb-2">
-        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Змінити</a>
-        <a asp-action="Index" class="btn btn-secondary">До переліку локацій</a>
-    </div>
-    <dl class="row">
-        <dt class = "col-sm-3">
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-        <dd class = "col-sm-9">
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-        <dt class = "col-sm-3">
-            @Html.DisplayNameFor(model => model.GoogleMapsLink)
-        </dt>
-        <dd class = "col-sm-9">
-            <a href="@Model.GoogleMapsLink">
-                @Html.DisplayFor(model => model.GoogleMapsLink)
-            </a>
-        </dd>
-        <dt class = "col-sm-3">
-            @Html.DisplayNameFor(model => model.Contact)
-        </dt>
-        <dd class = "col-sm-9">
-
-            <a class="badge bg-primary" asp-controller="Contacts" asp-action="Details" asp-route-id="@Model?.ContactId">
-                @Html.DisplayFor(model => model.Contact.Email)
-            </a>
-        </dd>
-        <dt class="col-sm-3">
-            Події в цьому місці
-        </dt>
-        <dd class="col-sm-9">
-            <a class="badge bg-success" asp-controller="Events" asp-action="Index" asp-route-locationId="@Model?.Id">
-                Перейти
-            </a>
-        </dd>
-    </dl>
-    <a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>
+<h1>Місце</h1>
+<h4>@Html.DisplayFor(model => model.Name)</h4>
+<div class="btn-group mb-2">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Змінити</a>
+    <a asp-action="Index" class="btn btn-secondary">До переліку локацій</a>
 </div>
+<hr />
+
+<dl class="row">
+    <dt class = "col-sm-3">
+        @Html.DisplayNameFor(model => model.Address)
+    </dt>
+    <dd class = "col-sm-9">
+        @Html.DisplayFor(model => model.Address)
+    </dd>
+    <dt class = "col-sm-3">
+        @Html.DisplayNameFor(model => model.GoogleMapsLink)
+    </dt>
+    <dd class = "col-sm-9">
+        <a href="@Model.GoogleMapsLink">
+            @Html.DisplayFor(model => model.GoogleMapsLink)
+        </a>
+    </dd>
+    <dt class = "col-sm-3">
+        @Html.DisplayNameFor(model => model.Contact)
+    </dt>
+    <dd class = "col-sm-9">
+
+        <a class="badge bg-primary" asp-controller="Contacts" asp-action="Details" asp-route-id="@Model?.ContactId">
+            @Html.DisplayFor(model => model.Contact.Email)
+        </a>
+    </dd>
+    <dt class="col-sm-3">
+        Події в цьому місці
+    </dt>
+    <dd class="col-sm-9">
+        <a class="badge bg-success" asp-controller="Events" asp-action="Index" asp-route-locationId="@Model?.Id">
+            Перейти
+        </a>
+    </dd>
+</dl>
+<a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>

@@ -8,9 +8,9 @@ namespace ParliamentInfrastructure.Controllers
     public class RolesController : Controller
     {
         RoleManager<IdentityRole> _roleManager;
-        UserManager<User> _userManager;
+        UserManager<DefaultUser> _userManager;
 
-        public RolesController(RoleManager<IdentityRole> roleManager, UserManager<User> userManager)
+        public RolesController(RoleManager<IdentityRole> roleManager, UserManager<DefaultUser> userManager)
         {
             _roleManager = roleManager;
             _userManager = userManager;
@@ -21,7 +21,7 @@ namespace ParliamentInfrastructure.Controllers
 
         public async Task<IActionResult> Edit(string userId)
         {
-            User user = await _userManager.FindByIdAsync(userId);
+            DefaultUser user = await _userManager.FindByIdAsync(userId);
             if (user is not null)
             {
                 var userRoles = await _userManager.GetRolesAsync(user);
@@ -41,7 +41,7 @@ namespace ParliamentInfrastructure.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(string userId, List<string> roles)
         {
-            User user = await _userManager.FindByIdAsync(userId);
+            DefaultUser user = await _userManager.FindByIdAsync(userId);
             if (user is not null)
             {
                 var userRoles = await _userManager.GetRolesAsync(user);

@@ -64,7 +64,7 @@ namespace ParliamentInfrastructure.Controllers
             {
                 _context.Add(department);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Details), new { id = department.Id });
             }
             ViewData["ContactId"] = new SelectList(_context.Contacts, "Id", "Email", department.ContactId);
             return View(department);

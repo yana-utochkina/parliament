@@ -7,30 +7,37 @@
 <h3>Створити департамент</h3>
 <hr />
 
-<div class="row">
-    <div class="col-md-10">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ContactId" class="control-label"></label>
-                <select asp-for="ContactId" class="form-control" asp-items="ViewBag.ContactId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <textarea rows="20" asp-for="Description" class="form-control"></textarea>
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="col-sm-12 d-flex justify-content-end">
-                <input type="submit" value="Створити" class="btn right btn-primary " />
-            </div>
-        </form>
+<form asp-action="Create" class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Name" class="control-label"></label>
+            <small class="text-danger">*</small>
+            <input asp-for="Name" type="text" class="form-control" placeholder="Введіть назву"/>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ContactId" class="control-label"></label>
+            <small class="text-danger">*</small>
+            <small class="text-muted"><i>Оберіть наявний або створіть новий</i></small>
+            <select asp-for="ContactId" class="form-control" asp-items="ViewBag.ContactId"></select>
+            <span asp-validation-for="ContactId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <a class="btn btn-outline-secondary" asp-controller="Contacts" asp-action="Create" target="_blank">Створити новий контакт</a>
+        </div>
     </div>
-</div>
+    <div class="col-md-8">
+        <div class="form-group">
+            <label asp-for="Description" class="control-label"></label>
+            <textarea rows="20" asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-sm-12 d-flex justify-content-end">
+        <input type="submit" value="Створити" class="btn right btn-primary " />
+    </div>
+</form>
 
 <div>
     <a asp-action="Index" class="btn btn-outline-danger">Назад до переліку</a>

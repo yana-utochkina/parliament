@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ParliamentDomain.Model;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ParliamentInfrastructure.Controllers
 {
@@ -48,18 +50,20 @@ namespace ParliamentInfrastructure.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Phone,Email,InstagramLink,Id")] Contact contact)
+        //[Authorize(Roles = "admin, worker")]
+        public async Task<IActionResult> Create([Bind("Phone,Email,InstagramLink,TelegramLink,Id")] Contact contact)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(contact);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Details), new { id = contact.Id });
             }
             return View(contact);
         }
 
         // GET: Contacts/Edit/5
+        //[Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -80,7 +84,8 @@ namespace ParliamentInfrastructure.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Phone,Email,InstagramLink,Id")] Contact contact)
+        //[Authorize(Roles = "admin, worker")]
+        public async Task<IActionResult> Edit(int id, [Bind("Phone,Email,InstagramLink,TelegramLink,Id")] Contact contact)
         {
             if (id != contact.Id)
             {
@@ -111,6 +116,7 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // GET: Contacts/Delete/5
+        //[Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -129,6 +135,7 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // POST: Contacts/Delete/5
+        //[Authorize(Roles = "admin, worker")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

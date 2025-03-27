@@ -10,6 +10,12 @@
     <h4>Місце</h4>
     <hr />
     <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
         <dt class = "col-sm-3">
             @Html.DisplayNameFor(model => model.Address)
         </dt>
@@ -33,6 +39,6 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Видалити" class="btn btn-danger" />
-        <a class="btn btn-primary" asp-action="Index">Повернутися до переліку</a>
+        <a class="btn btn-outline-secondary" href="javascript:void(0);" onclick="window.history.back();">Повернутися</a>
     </form>
 </div>

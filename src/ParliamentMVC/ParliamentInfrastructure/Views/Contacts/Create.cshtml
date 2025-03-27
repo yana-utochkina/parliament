@@ -4,21 +4,23 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Створити</h1>
-
-<h4>Контакт</h4>
+<h4>Створити контакт</h4>
 <hr />
+
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Phone" class="control-label"></label>
+                <small class="text-muted">eg. <i>0123456789</i></small>
                 <input asp-for="Phone" class="form-control" />
                 <span asp-validation-for="Phone" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Email" class="control-label"></label>
+                <small class="text-danger">*</small>
+                <small class="text-muted">eg. <i>example@gmail.com</i></small>
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
@@ -28,14 +30,15 @@
                 <span asp-validation-for="InstagramLink" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="TelegramLink" class="control-label"></label>
+                <input asp-for="TelegramLink" class="form-control" />
+                <span asp-validation-for="TelegramLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Створити" class="btn btn-primary" />
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Повернутися до переліку</a>
 </div>
 
 @section Scripts {

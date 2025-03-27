@@ -25,7 +25,7 @@ builder.Services.AddDbContext<IdentityContext>(option => option.UseSqlServer(
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
+builder.Services.AddIdentity<DefaultUser, IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
 
 var app = builder.Build();
 
@@ -34,7 +34,7 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     try
     {
-        var userManager = services.GetRequiredService<UserManager<User>>();
+        var userManager = services.GetRequiredService<UserManager<DefaultUser>>();
         var rolesManager = services.GetRequiredService<RoleManager<IdentityRole>>();
         await RoleInitializer.InitializeAsync(userManager, rolesManager);
     }

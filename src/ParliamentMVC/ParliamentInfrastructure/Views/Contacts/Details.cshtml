@@ -4,33 +4,38 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Деталі</h1>
+<h4>Контакт</h4>
+<a class="btn btn-secondary" href="javascript:void(0);" onclick="window.history.back();">Повернутися</a>
+<hr />
 
-<div>
-    <h4>Контакт</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Phone)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Phone)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.InstagramLink)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.InstagramLink)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Змінити</a> |
-    <a asp-action="Index">До переліку контактів</a>
+
+<dl class="row">
+    <dt class = "col-md-4">
+        @Html.DisplayNameFor(model => model.Phone)
+    </dt>
+    <dd class = "col-md-8">
+        @Html.DisplayFor(model => model.Phone)
+    </dd>
+    <dt class="col-md-4">
+        @Html.DisplayNameFor(model => model.Email)
+    </dt>
+    <dd class="col-md-8">
+        @Html.DisplayFor(model => model.Email)
+    </dd>
+    <dt class="col-md-4">
+        @Html.DisplayNameFor(model => model.InstagramLink)
+    </dt>
+    <dd class="col-md-8">
+        <a href="@Html.DisplayFor(model => model.InstagramLink)">@Html.DisplayFor(model => model.InstagramLink)</a>
+    </dd>
+    <dt class="col-md-4">
+        @Html.DisplayNameFor(model => model.TelegramLink)
+    </dt>
+    <dd class="col-md-8">
+        <a href="@Html.DisplayFor(model => model.TelegramLink)">@Html.DisplayFor(model => model.TelegramLink)</a>
+    </dd>
+</dl>
+<div class="btn-group md-2">
+    <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@Model?.Id">Видалити</a>
+    <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@Model?.Id">Змінити</a>
 </div>

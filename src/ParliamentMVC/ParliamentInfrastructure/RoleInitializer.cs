@@ -5,7 +5,7 @@ namespace ParliamentInfrastructure
 {
     public class RoleInitializer
     {
-        public static async Task InitializeAsync(UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
+        public static async Task InitializeAsync(UserManager<DefaultUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             string adminEmail = "admin@gmail.com";
             string password = "Qwerty_1";
@@ -13,13 +13,21 @@ namespace ParliamentInfrastructure
             {
                 await roleManager.CreateAsync(new IdentityRole("admin"));
             }
-            if (await roleManager.FindByNameAsync("user") is null)
+            if (await roleManager.FindByNameAsync("worker") is null)
             {
-                await roleManager.CreateAsync(new IdentityRole("user"));
+                await roleManager.CreateAsync(new IdentityRole("worker"));
+            }
+            if (await roleManager.FindByNameAsync("student") is null)
+            {
+                await roleManager.CreateAsync(new IdentityRole("student"));
+            }
+            if (await roleManager.FindByNameAsync("guest") is null)
+            {
+                await roleManager.CreateAsync(new IdentityRole("guest"));
             }
             if (await userManager.FindByNameAsync(adminEmail) is null)
             {
-                User admin = new User { Email = adminEmail, UserName = adminEmail };
+                DefaultUser admin = new DefaultUser { Email = adminEmail, UserName = adminEmail };
                 IdentityResult result = await userManager.CreateAsync(admin, password);
                 if (result.Succeeded)
                 {

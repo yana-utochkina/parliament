@@ -11,10 +11,10 @@ public partial class Contact : Entity
     [Display(Name = "Електронна пошта")]
     public string Email { get; set; } = null!;
 
-    [Display(Name = "Посилання на інстаграм")]
+    [Display(Name = "Посилання на Інстаграм")]
     public string? InstagramLink { get; set; }
 
-    [Display(Name = "Посилання на телеграм")]
+    [Display(Name = "Посилання на Телеграм")]
     public string? TelegramLink { get; set; }
 
     [Display(Name = "Департаменти")]

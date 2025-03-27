@@ -52,7 +52,7 @@ namespace ParliamentInfrastructure.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Address,ContactId,GoogleMapsLink,Id")] Location location)
+        public async Task<IActionResult> Create([Bind("Name,Address,ContactId,GoogleMapsLink,Id")] Location location)
         {
             Contact contact = _context.Contacts.FirstOrDefault(c => c.Id == location.ContactId);
             location.Contact = contact;
@@ -91,7 +91,7 @@ namespace ParliamentInfrastructure.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Address,ContactId,GoogleMapsLink,Id")] Location location)
+        public async Task<IActionResult> Edit(int id, [Bind("Name,Address,ContactId,GoogleMapsLink,Id")] Location location)
         {
             if (id != location.Id)
             {
