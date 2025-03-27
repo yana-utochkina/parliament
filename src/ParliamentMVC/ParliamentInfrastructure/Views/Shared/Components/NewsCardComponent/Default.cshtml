@@ -6,17 +6,20 @@
             <h4 class="card-title"> @Model.Title </h4>
         </div>
         <div class="card-footer">
-            <div class="badges">
-                <span class="badge bg-warning">
-                    @Model.Department
-                </span>
+            <div>
+                @Model.ShortDescription
             </div>
             <p/>
-            <div class="container d-flex justify-content-between">
-                <span> 
+            <div class="row">
+                <span class="col-sm-4"> 
                     @Model.PublicationDate.ToShortDateString()
                 </span>
-                <a class="btn btn-light-primary" asp-controller="News" asp-action="Details" asp-route-id="@Model.Id">
+                <div class="badges col-sm-4">
+                    <span class="badge bg-warning">
+                        @Model.Department
+                    </span>
+                </div>
+                <a class="btn btn-light-primary col-sm-4" asp-controller="News" asp-action="Details" asp-route-id="@Model.Id">
                     Читати
                 </a>
             </div>

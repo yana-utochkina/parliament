@@ -4,51 +4,51 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>@Html.DisplayFor(model => model.Title)</h1>
-
-<div>
-    <h4>Подія</h4>
-    <hr />
-    <div class="btn-group mb-2">
-        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Змінити</a>
-        <a asp-action="Index" class="btn btn-secondary">До переліку подій</a>
-    </div>
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Department)
-        </dt>
-        <dd class="col-sm-10">
-            <a class="badge bg-warning" asp-controller="Departments" asp-action="Details" asp-route-id="@Model?.DepartmentId">@Html.DisplayFor(model => model.Department.Name)</a>
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AccessType)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AccessType)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.StartDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.StartDate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.EndDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.EndDate)
-        </dd>        
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
-        <dd class = "col-sm-10">
-            <a class="badge bg-info" asp-controller="Locations" asp-action="Details" asp-route-id="@Model?.LocationId">@Html.DisplayFor(model => model.Location.Address)</a>
-        </dd>
-    </dl>
-    <hr/>
-    <div>
-        @Html.Raw(Model.Description)
-    </div>
-    <a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>
+<div class="d-flex">
+    <h1>
+        @Html.DisplayFor(model => model.Title) by
+        <span class="badge bg-warning">@Html.DisplayFor(model => model.Department.Name)</span>
+    </h1>
 </div>
+
+
+
+<h4>Подія</h4>
+<div class="btn-group mb-2">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Змінити</a>
+    <a asp-action="Index" class="btn btn-secondary">До переліку подій</a>
+</div>
+<hr />
+<dl class="row">
+    <dt class = "col-sm-2">
+        @Html.DisplayNameFor(model => model.AccessType)
+    </dt>
+    <dd class = "col-sm-10">
+        @Html.DisplayFor(model => model.AccessType)
+    </dd>
+    <dt class = "col-sm-2">
+        @Html.DisplayNameFor(model => model.StartDate)
+    </dt>
+    <dd class = "col-sm-10">
+        @Html.DisplayFor(model => model.StartDate)
+    </dd>
+    <dt class = "col-sm-2">
+        @Html.DisplayNameFor(model => model.EndDate)
+    </dt>
+    <dd class = "col-sm-10">
+        @Html.DisplayFor(model => model.EndDate)
+    </dd>        
+    <dt class = "col-sm-2">
+        @Html.DisplayNameFor(model => model.Location)
+    </dt>
+    <dd class = "col-sm-10">
+        @Html.DisplayFor(model => model.Location.Name)
+        <a class="text-decoration-underline text-info" asp-controller="Locations" asp-action="Details" asp-route-id="@Model?.LocationId">Детальніше</a>
+    </dd>
+</dl>
+<hr/>
+<div>
+    @Html.Raw(Model.Description)
+</div>
+<a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>
 

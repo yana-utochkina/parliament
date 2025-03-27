@@ -6,89 +6,59 @@
 
 <h1>@Html.DisplayFor(model => model.Name)</h1>
 
-<div>
-    <h4>Департамент</h4>
-    <hr />
-    <div class="btn-group mb-2">
-        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Змінити</a>
-        <a asp-action="Index" class="btn btn-secondary">До усіх департаментів</a>
-    </div>
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Contact.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            <a class="badge bg-success" asp-controller = "Contacts" asp-action = "Details" asp-route-id = "@Model?.ContactId">@Html.DisplayFor(model => model.Contact.Email)</a>
-        </dd>
-        <dt class = "col-sm-2">
-            Новини департаменту
-        </dt>
-        <dd class = "col-sm-10">
-            <a class="badge bg-info" asp-controller="News" asp-action="Index" asp-route-departmentId="@Model?.Id">Переглянути</a>
-        </dd>
-        <dt class="col-sm-2">
-            Події від департаменту
-        </dt>
-        <dd class="col-sm-10">
-            <a class="badge bg-info" asp-controller="Events" asp-action="Index" asp-route-departmentId="@Model?.Id">Переглянути</a>
-        </dd>
-    </dl>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header">
-                    <h4>
-                        Новини департаменту
-                    </h4>
-                    <p>
-                        Останні новини
-                    </p>
-                </div>
-                <div class="card-body">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item">
-
-                            </div>
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header">
-                    <h4>
-                        Події департаменту
-                    </h4>
-                    <p>
-                        Найближчі події
-                    </p>
-                </div>
-                <div class="card-body">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>
+<div class="btn-group mb-2">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Змінити</a>
+    <a asp-action="Index" class="btn btn-secondary">До усіх департаментів</a>
 </div>
+<hr />
+<div class="row">
+    <div class="col-md-11">
+        @Html.Raw(Model.Description)
+    </div>
+    <div class="col-md-1">
+        <p class="text-center"><b>Наші соцмережі:</b></p>
+        <a href="@Html.DisplayFor(model => model.Contact.InstagramLink)" target="_blank">
+            <img style="max-width: 60px; margin: 8px;" src="~/lib/images/Instagram-logo.svg" />
+        </a>
+        <a href="@Html.DisplayFor(model => model.Contact.TelegramLink)" target="_blank">
+            <img style="max-width: 60px;margin: 8px;" src="~/lib/images/Telegram-logo.svg" />
+        </a>
+    </div>
+</div>
+
+<hr />
+    
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4>
+                    Новини департаменту
+                </h4>
+                <p>
+                    Останні новини
+                </p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4>
+                    Події департаменту
+                </h4>
+                <p>
+                    Найближчі події
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<h2>Хочете зв'язатися з нами?</h2>
+<p>Напишіть нам лист на електронну пошту <b>@Html.DisplayFor(model => model.Contact.Email)</b></p>
+
+<a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>

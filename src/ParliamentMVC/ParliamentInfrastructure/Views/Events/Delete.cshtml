@@ -57,6 +57,6 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Видалити" class="btn btn-danger" />
-        <a class="btn btn-primary" asp-action="Index">Повернутися до переліку</a>
+        <a class="btn btn-outline-secondary" href="javascript:void(0);" onclick="window.history.back();">Повернутися</a>
     </form>
 </div>

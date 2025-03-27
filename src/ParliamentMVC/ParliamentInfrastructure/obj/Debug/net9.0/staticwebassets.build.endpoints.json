@@ -14985,6 +14985,900 @@
       ]
     },
     {
+      "Route": "lib/images/GoogleMaps-logo.px7gzns213.svg",
+      "AssetFile": "lib/images/GoogleMaps-logo.svg.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000465983225"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2145"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9JdglzCMCsSjYWObw8nJR53WyGX0dr74Bbp0lkE09ps=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"LYsgmJKhoW87Ltl2bMPcDAnjeX3aq3WJNf2beN4CFZo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 20:13:12 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "px7gzns213"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LYsgmJKhoW87Ltl2bMPcDAnjeX3aq3WJNf2beN4CFZo="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/images/GoogleMaps-logo.svg"
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/GoogleMaps-logo.px7gzns213.svg",
+      "AssetFile": "lib/images/GoogleMaps-logo.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4472"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LYsgmJKhoW87Ltl2bMPcDAnjeX3aq3WJNf2beN4CFZo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 20:13:12 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "px7gzns213"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LYsgmJKhoW87Ltl2bMPcDAnjeX3aq3WJNf2beN4CFZo="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/images/GoogleMaps-logo.svg"
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/GoogleMaps-logo.px7gzns213.svg.gz",
+      "AssetFile": "lib/images/GoogleMaps-logo.svg.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2145"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9JdglzCMCsSjYWObw8nJR53WyGX0dr74Bbp0lkE09ps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 20:13:12 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "px7gzns213"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9JdglzCMCsSjYWObw8nJR53WyGX0dr74Bbp0lkE09ps="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/images/GoogleMaps-logo.svg.gz"
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/GoogleMaps-logo.svg",
+      "AssetFile": "lib/images/GoogleMaps-logo.svg.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000465983225"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2145"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9JdglzCMCsSjYWObw8nJR53WyGX0dr74Bbp0lkE09ps=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"LYsgmJKhoW87Ltl2bMPcDAnjeX3aq3WJNf2beN4CFZo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 20:13:12 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LYsgmJKhoW87Ltl2bMPcDAnjeX3aq3WJNf2beN4CFZo="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/GoogleMaps-logo.svg",
+      "AssetFile": "lib/images/GoogleMaps-logo.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4472"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LYsgmJKhoW87Ltl2bMPcDAnjeX3aq3WJNf2beN4CFZo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 20:13:12 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LYsgmJKhoW87Ltl2bMPcDAnjeX3aq3WJNf2beN4CFZo="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/GoogleMaps-logo.svg.gz",
+      "AssetFile": "lib/images/GoogleMaps-logo.svg.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2145"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9JdglzCMCsSjYWObw8nJR53WyGX0dr74Bbp0lkE09ps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 20:13:12 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9JdglzCMCsSjYWObw8nJR53WyGX0dr74Bbp0lkE09ps="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Instagram-logo.f2s86p8a4w.svg",
+      "AssetFile": "lib/images/Instagram-logo.svg.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000383729854"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2605"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y9Mc2LScfwitCr1HaDkS8E6V5XNiZMzpYHX9bcbCXP4=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"FwrFlUBmPLxxg0KThFCeMS3gjjfWaUP8cTpXwaJugVE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:26:46 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f2s86p8a4w"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FwrFlUBmPLxxg0KThFCeMS3gjjfWaUP8cTpXwaJugVE="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/images/Instagram-logo.svg"
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Instagram-logo.f2s86p8a4w.svg",
+      "AssetFile": "lib/images/Instagram-logo.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8948"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FwrFlUBmPLxxg0KThFCeMS3gjjfWaUP8cTpXwaJugVE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:26:46 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f2s86p8a4w"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FwrFlUBmPLxxg0KThFCeMS3gjjfWaUP8cTpXwaJugVE="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/images/Instagram-logo.svg"
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Instagram-logo.f2s86p8a4w.svg.gz",
+      "AssetFile": "lib/images/Instagram-logo.svg.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2605"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y9Mc2LScfwitCr1HaDkS8E6V5XNiZMzpYHX9bcbCXP4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:26:46 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f2s86p8a4w"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-y9Mc2LScfwitCr1HaDkS8E6V5XNiZMzpYHX9bcbCXP4="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/images/Instagram-logo.svg.gz"
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Instagram-logo.svg",
+      "AssetFile": "lib/images/Instagram-logo.svg.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000383729854"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2605"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y9Mc2LScfwitCr1HaDkS8E6V5XNiZMzpYHX9bcbCXP4=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"FwrFlUBmPLxxg0KThFCeMS3gjjfWaUP8cTpXwaJugVE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:26:46 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FwrFlUBmPLxxg0KThFCeMS3gjjfWaUP8cTpXwaJugVE="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Instagram-logo.svg",
+      "AssetFile": "lib/images/Instagram-logo.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8948"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FwrFlUBmPLxxg0KThFCeMS3gjjfWaUP8cTpXwaJugVE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:26:46 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FwrFlUBmPLxxg0KThFCeMS3gjjfWaUP8cTpXwaJugVE="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Instagram-logo.svg.gz",
+      "AssetFile": "lib/images/Instagram-logo.svg.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2605"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y9Mc2LScfwitCr1HaDkS8E6V5XNiZMzpYHX9bcbCXP4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:26:46 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-y9Mc2LScfwitCr1HaDkS8E6V5XNiZMzpYHX9bcbCXP4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Telegram-logo.kqtt636tl0.svg",
+      "AssetFile": "lib/images/Telegram-logo.svg.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001666666667"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "599"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LfhOLvx1jC7neDugVNyOl/kqwIY35ueiS3rt0VcLIaE=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"zI1r3vkTDlNVleDY5BinU6DbHUTpNRa25YrmF0zQsug=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:27:16 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kqtt636tl0"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zI1r3vkTDlNVleDY5BinU6DbHUTpNRa25YrmF0zQsug="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/images/Telegram-logo.svg"
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Telegram-logo.kqtt636tl0.svg",
+      "AssetFile": "lib/images/Telegram-logo.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1065"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zI1r3vkTDlNVleDY5BinU6DbHUTpNRa25YrmF0zQsug=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:27:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kqtt636tl0"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zI1r3vkTDlNVleDY5BinU6DbHUTpNRa25YrmF0zQsug="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/images/Telegram-logo.svg"
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Telegram-logo.kqtt636tl0.svg.gz",
+      "AssetFile": "lib/images/Telegram-logo.svg.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "599"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LfhOLvx1jC7neDugVNyOl/kqwIY35ueiS3rt0VcLIaE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:27:16 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kqtt636tl0"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LfhOLvx1jC7neDugVNyOl/kqwIY35ueiS3rt0VcLIaE="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/images/Telegram-logo.svg.gz"
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Telegram-logo.svg",
+      "AssetFile": "lib/images/Telegram-logo.svg.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001666666667"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "599"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LfhOLvx1jC7neDugVNyOl/kqwIY35ueiS3rt0VcLIaE=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"zI1r3vkTDlNVleDY5BinU6DbHUTpNRa25YrmF0zQsug=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:27:16 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zI1r3vkTDlNVleDY5BinU6DbHUTpNRa25YrmF0zQsug="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Telegram-logo.svg",
+      "AssetFile": "lib/images/Telegram-logo.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1065"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zI1r3vkTDlNVleDY5BinU6DbHUTpNRa25YrmF0zQsug=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:27:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zI1r3vkTDlNVleDY5BinU6DbHUTpNRa25YrmF0zQsug="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Telegram-logo.svg.gz",
+      "AssetFile": "lib/images/Telegram-logo.svg.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "599"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LfhOLvx1jC7neDugVNyOl/kqwIY35ueiS3rt0VcLIaE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:27:16 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LfhOLvx1jC7neDugVNyOl/kqwIY35ueiS3rt0VcLIaE="
+        }
+      ]
+    },
+    {
       "Route": "lib/images/abstract.5ssondd4fw.svg",
       "AssetFile": "lib/images/abstract.svg.gz",
       "Selectors": [

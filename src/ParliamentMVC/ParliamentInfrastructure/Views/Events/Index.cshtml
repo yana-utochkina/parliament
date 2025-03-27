@@ -4,7 +4,7 @@
     ViewData["Title"] = "Events";
 }
 
-<h1>Усі події</h1>
+<h1>Події</h1>
 
 <p>
     <div class="container">
@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row justify-content-center">
             @foreach (var item in Model)
-            {
+                {
                 <div class="col-md-10 d-flex justify-content-center">
                     @await Component.InvokeAsync("EventCardComponent", new EventCardViewModel(item.Id, item.Title, item.Department.Name, item.AccessType, item.StartDate))
                 </div>

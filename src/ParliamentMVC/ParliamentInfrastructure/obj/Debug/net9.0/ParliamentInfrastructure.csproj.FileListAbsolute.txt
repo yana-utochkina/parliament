@@ -355,3 +355,6 @@ D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\b
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\compressed\rje9xvjefc-f2s86p8a4w.gz
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\compressed\zehtf5up0w-kqtt636tl0.gz
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\obj\Debug\net9.0\compressed\wcyzvfhj24-px7gzns213.gz

@@ -11,37 +11,35 @@
 </div>
 <hr />
 
-<dl class="row">
-    <dt class = "col-sm-3">
-        @Html.DisplayNameFor(model => model.Address)
-    </dt>
-    <dd class = "col-sm-9">
-        @Html.DisplayFor(model => model.Address)
-    </dd>
-    <dt class = "col-sm-3">
-        @Html.DisplayNameFor(model => model.GoogleMapsLink)
-    </dt>
-    <dd class = "col-sm-9">
-        <a href="@Model.GoogleMapsLink">
-            @Html.DisplayFor(model => model.GoogleMapsLink)
+<div class="row">
+    <div class="col-md-10">
+        <p>
+            <b>@Html.DisplayNameFor(model => model.Address)</b>: @Html.DisplayFor(model => model.Address)
+        </p>
+        <p>
+            <b>@Html.DisplayNameFor(model => model.Contact.Email)</b>: @Html.DisplayFor(model => model.Contact.Email)
+        </p>
+        <p>
+            <b>Соцмережі: </b>
+            <a href="@Html.DisplayFor(model => model.Contact.InstagramLink)">
+                <img style="max-width: 30px; margin: 0 0 0 20px" src="~/lib/images/Instagram-logo.svg" />
+            </a>
+            <a href="@Html.DisplayFor(model => model.Contact.TelegramLink)">
+                <img style="max-width: 30px; margin: 0 0 0 20px" src="~/lib/images/Telegram-logo.svg" />
+            </a>
+        </p>
+    </div>
+    <div class="col-md-2">
+        <p><b>Переглянути на мапі:</b></p>
+        <a href="@Html.DisplayFor(model => model.GoogleMapsLink)" target="_blank">
+            <img style="max-width: 140px" src="~/lib/images/GoogleMaps-logo.svg" />
         </a>
-    </dd>
-    <dt class = "col-sm-3">
-        @Html.DisplayNameFor(model => model.Contact)
-    </dt>
-    <dd class = "col-sm-9">
+        
+    </div>
+</div>
+<p>
+    <b>Події в цьому місці: </b>
+    <a asp-controller="Events" asp-action="Index" asp-route-locationId="@Model?.Id" class="text-decoration-underline text-info">Переглянути</a>
+</p>
 
-        <a class="badge bg-primary" asp-controller="Contacts" asp-action="Details" asp-route-id="@Model?.ContactId">
-            @Html.DisplayFor(model => model.Contact.Email)
-        </a>
-    </dd>
-    <dt class="col-sm-3">
-        Події в цьому місці
-    </dt>
-    <dd class="col-sm-9">
-        <a class="badge bg-success" asp-controller="Events" asp-action="Index" asp-route-locationId="@Model?.Id">
-            Перейти
-        </a>
-    </dd>
-</dl>
 <a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>

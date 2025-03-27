@@ -205,6 +205,18 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\GoogleMaps-logo.svg",
+      "PackagePath": "staticwebassets\\lib\\images\\GoogleMaps-logo.svg"
+    },
+    {
+      "Id": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\Instagram-logo.svg",
+      "PackagePath": "staticwebassets\\lib\\images\\Instagram-logo.svg"
+    },
+    {
+      "Id": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\Telegram-logo.svg",
+      "PackagePath": "staticwebassets\\lib\\images\\Telegram-logo.svg"
+    },
+    {
       "Id": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\abstract.svg",
       "PackagePath": "staticwebassets\\lib\\images\\abstract.svg"
     },

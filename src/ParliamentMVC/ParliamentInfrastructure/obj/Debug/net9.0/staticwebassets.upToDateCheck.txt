@@ -49,6 +49,7 @@ D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\w
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\jquery\dist\jquery.slim.min.js
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\images\Instagram-logo.svg
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\images\abstract.svg
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\jquery\dist\jquery.min.map
@@ -56,6 +57,7 @@ D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\w
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\jquery\dist\jquery.min.js
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\images\GoogleMaps-logo.svg
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
@@ -63,6 +65,7 @@ D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\w
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\images\Telegram-logo.svg
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
@@ -114,6 +117,9 @@ wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 wwwroot\lib\bootstrap\LICENSE
 wwwroot\lib\images\abstract.svg
+wwwroot\lib\images\GoogleMaps-logo.svg
+wwwroot\lib\images\Instagram-logo.svg
+wwwroot\lib\images\Telegram-logo.svg
 wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map

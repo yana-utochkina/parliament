@@ -18,7 +18,7 @@
             @foreach (var item in Model)
             {
                 <div class="col-md-4 d-flex justify-content-center">
-                    @await Component.InvokeAsync("NewsCardComponent", new NewsCardViewModel(item.Id, item.Title, item.Department.Name, item.PublicationDate))
+                    @await Component.InvokeAsync("NewsCardComponent", new NewsCardViewModel(item.Id, item.Title, item.Department.Name, item.PublicationDate, item.ShortDescription))
                 </div>
             }
         </div>
