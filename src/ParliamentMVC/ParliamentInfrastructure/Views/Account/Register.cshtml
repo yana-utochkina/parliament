@@ -1,37 +1,70 @@
 ﻿@model ParliamentInfrastructure.ViewModels.RegisterViewModel
 
-<h2>Реєстрація</h2>
+@{
+    ViewData["Title"] = "Register";
+}
 
-<form method="post" asp-controller="Account" asp-action="Register">
-	<div>
-		<label asp-for="Email"></label><br/>
-		<input asp-for="Email" />
-		<span asp-validation-for="Email"></span>
+<div class="d-flex justify-content-center">
+	<div class="card col-md-6">
+		<div class="card-header">
+			<h2 class="card-title">Реєстрація</h2>
+		</div>
+		<div class="card-content">
+			<div class="card-body">
+				<form class="form form-horizontal" method="post" asp-controller="Account" asp-action="Register">
+					<div class="form-body row">
+						<div class="col-md-4 text-end">
+							<label asp-for="Email"></label>
+							<small class="text-danger">*</small>
+						</div>
+						<div class="col-md-8 form-group">
+							<input type="text" class="form-control" asp-for="Email" placeholder="example@gmail.com"/>
+							<span asp-validation-for="Email"></span>
+						</div>
+						<div class="col-md-4 text-end">
+							<label asp-for="Password"></label>
+							<small class="text-danger">*</small>
+						</div>
+						<div class="col-md-8 form-group">
+							<input type="password" class="form-control" asp-for="Password" />
+							<span asp-validation-for="Password"></span>
+						</div>
+						<div class="col-md-4 text-end">
+							<label asp-for="PasswordConfirm"></label>
+						</div>
+						<div class="col-md-8 form-group">
+							<input type="password" class="form-control" asp-for="PasswordConfirm" />
+							<span asp-validation-for="PasswordConfirm"></span>
+						</div>
+						<hr class="table-group-divider"/>
+						<div class="col-md-4 text-end">
+							<label asp-for="FullName"></label>
+							<small class="text-danger">*</small>
+						</div>
+						<div class="col-md-8 form-group">
+							<input type="text" class="form-control" asp-for="FullName" placeholder="Прізвище Ім'я"/>
+							<span asp-validation-for="FullName"></span>
+						</div>
+						<div class="col-md-4 text-end">
+							<label asp-for="University"></label>
+							<small class="text-danger">*</small>
+						</div>
+						<div class="col-md-8 form-group">
+							<input type="text" class="form-control" asp-for="University" placeholder="Введіть назву університету"/>
+						</div>
+						<div class="col-md-4 text-end">
+							<label asp-for="Faculty"></label>
+							<small class="text-danger">*</small>
+						</div>
+						<div class="col-md-8 form-group">
+							<input type="text" class="form-control" asp-for="Faculty" placeholder="Введіть назву факультету"/>
+						</div>
+						<div class="d-flex justify-content-end">
+							<input class="btn btn-primary" type="submit" value="Реєстрація" />
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
-	<div>
-		<label asp-for="Password"></label><br/>
-		<input asp-for="Password"/>
-		<span asp-validation-for="Password"></span>
-	</div>
-	<div>
-		<label asp-for="PasswordConfirm"></label><br />
-		<input asp-for="PasswordConfirm" />
-		<span asp-validation-for="PasswordConfirm"></span>
-	</div>
-	<div>
-		<label asp-for="FullName"></label><br/>
-		<input asp-for="FullName" />
-		<span asp-validation-for="FullName"></span>
-	</div>
-	<div>
-		<label asp-for="University"></label><br/>
-		<input asp-for="University"/>
-	</div>
-	<div>
-		<label asp-for="Faculty"></label><br/>
-		<input asp-for="Faculty" />
-	</div>
-	<div>
-		<input type="submit" value="Реєстрація"/>
-	</div>
-</form>
+</div>

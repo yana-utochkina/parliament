@@ -1,24 +1,51 @@
 ﻿@model ParliamentInfrastructure.ViewModels.LoginViewModel
 
-<h2>Вхід в акаунт</h2>
+@{
+	ViewData["Title"] = "Login";
+}
 
-<form method="post" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@Model.ReturnUrl">
-	<div asp-validation-summary="ModelOnly"></div>
-	<div>
-		<label asp-for="Email"></label> <br/>
-		<input asp-for="Email"/>
-		<span asp-validation-for="Email"></span>
+<div class="d-flex justify-content-center">
+	<div class="card col-md-6">
+		<div class="card-header">
+			<h2 class="card-title">Вхід</h2>
+		</div>
+		<div class="card-content">
+			<div class="card-body">
+				<form class="form form-horizontal" method="post" asp-controller="Account" asp-action="Login">
+					@Html.AntiForgeryToken()
+					@* <div asp-validation-summary="ModelOnly"></div> *@
+					<div class="form-body row">
+						<div class="col-md-4 text-end">
+							<label asp-for="Email"></label>
+							<small class="text-danger">*</small>
+						</div>
+						<div class="col-md-8 form-group">
+							<input type="text" class="form-control" asp-for="Email" placeholder="example@gmail.com" />
+							<span asp-validation-for="Email"></span>
+						</div>
+						<div class="col-md-4 text-end">
+							<label asp-for="Password"></label>
+							<small class="text-danger">*</small>
+						</div>
+						<div class="col-md-8 form-group">
+							<input type="password" class="form-control" asp-for="Password" />
+							<span asp-validation-for="Password"></span>
+						</div>
+						<div class="col-12 col-md-8 offset-md-4 form-group">
+							<div class="form-check">
+								<div class="checkbox">
+									<input type="checkbox" class="form-check-input" asp-for="RememberMe" />
+									<label asp-for="RememberMe"></label>
+								</div>
+							</div>
+						</div>
+						
+						<div class="d-flex justify-content-end">
+							<input class="btn btn-primary" type="submit" value="Увійти" />
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
-	<div>
-		<label asp-for="Password"></label> <br />
-		<input asp-for="Password" />
-		<span asp-validation-for="Password"></span>
-	</div>
-	<div>
-		<label asp-for="RememberMe"></label><br/>
-		<input asp-for="RememberMe"/>
-	</div>
-	<div>
-		<input type="submit" value="Увійти"
-	</div>
-</form>
+</div>

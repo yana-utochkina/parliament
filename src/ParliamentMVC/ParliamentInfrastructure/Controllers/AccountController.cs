@@ -1,98 +1,124 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ParliamentDomain.Model;
 using ParliamentInfrastructure.Models;
 using ParliamentInfrastructure.ViewModels;
 
-namespace ParliamentInfrastructure.Controllers
+namespace ParliamentInfrastructure.Controllers;
+public class AccountController : Controller
 {
-    public class AccountController : Controller
+    private readonly UserManager<DefaultUser> _userManager;
+    private readonly SignInManager<DefaultUser> _signInManager;
+
+    private readonly ParliamentDbContext _context;
+
+    public AccountController(
+        UserManager<DefaultUser> userManager, 
+        SignInManager<DefaultUser> signInManager, 
+        ParliamentDbContext context)
     {
-        private readonly UserManager<DefaultUser> _userManager;
-        private readonly SignInManager<DefaultUser> _signInManager;
+        _userManager = userManager;
+        _signInManager = signInManager;
+        _context = context;
+    }
 
-        private readonly ParliamentDbContext _context;
-        private readonly IHttpContextAccessor _httpContextAccessor;
+    [HttpGet]
+    public IActionResult Register()
+    {
+        return View();
+    }
 
-        public AccountController(UserManager<DefaultUser> userManager, SignInManager<DefaultUser> signInManager, ParliamentDbContext context, IHttpContextAccessor httpContextAccessor)
+    [HttpPost]
+    public async Task<ActionResult> Register(RegisterViewModel model)
+    {
+        if (ModelState.IsValid)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
-            _context = context;
-            _httpContextAccessor = httpContextAccessor;
-        }
+            DefaultUser defaultUser = new DefaultUser 
+            { 
+                Email = model.Email,    
+                UserName = model.Email 
+            };
+            var result = await _userManager.CreateAsync(defaultUser, model.Password);
 
-        [HttpGet]
-        public IActionResult Register()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<ActionResult> Register(RegisterViewModel model)
-        {
-            if (ModelState.IsValid)
+            defaultUser.EmailConfirmed = true;
+            await _userManager.UpdateAsync(defaultUser);
+            if (result.Succeeded)
             {
-                DefaultUser defaultUser = new DefaultUser { Email = model.Email, UserName = model.Email, };
-                var result = await _userManager.CreateAsync(defaultUser, model.Password);
-                if (result.Succeeded)
+                await _signInManager.SignInAsync(defaultUser, false);
+                User user = new User
                 {
-                    await _signInManager.SignInAsync(defaultUser, false);
-                    User user = new User { Email = model.Email, FullName = model.FullName, Faculty = model.Faculty, University = model.University };
-                    user.Id = _userManager.FindByIdAsync(_userManager.GetUserId(_httpContextAccessor.HttpContext?.User)).Id;
-                    await _context.Users.AddAsync(user);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction("Index", "Home");
-                }
-                else
+                    Email = model.Email,
+                    FullName = model.FullName,
+                    Faculty = model.Faculty,
+                    University = model.University
+                };
+
+                await _context.Users.AddAsync(user);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                foreach (var error in result.Errors)
                 {
-                    foreach (var error in result.Errors)
-                    {
-                        ModelState.AddModelError(string.Empty, error.Description);
-                    }
+                    ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
+        }
+        return View(model);
+    }
+
+
+    [HttpGet]
+    public IActionResult Login(string returnUrl = null)
+    {
+        return View(new LoginViewModel { ReturnUrl = returnUrl });
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Login([Bind("Email,Password,RememberMe,ReturnUrl")] LoginViewModel model)
+    {
+        var user = await _userManager.FindByEmailAsync(model.Email);
+        user.EmailConfirmed = true;
+        await _userManager.UpdateAsync(user);
+        if (user == null)
+        {
+            ModelState.AddModelError(string.Empty, "Користувач не знайдений.");
             return View(model);
         }
 
-        [HttpGet]
-        public IActionResult Login(string returnUrl = null)
+        var result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, false);
+        if (result.Succeeded)
         {
-            return View(new LoginViewModel { ReturnUrl = returnUrl });
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
-                if (result.Succeeded)
-                {
-                    if (!string.IsNullOrEmpty(model.ReturnUrl) && Url.IsLocalUrl(model.ReturnUrl))
-                    {
-                        return Redirect(model.ReturnUrl);
-                    }
-                    else
-                    {
-                        return RedirectToAction("Index", "Home");
-                    }
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Неправильна пошта чи (та) пароль");
-                }
-            }
-            return View(model);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Logout()
-        {
-            await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
+        else
+        {
+            ModelState.AddModelError(string.Empty, "Невірний email або пароль.");
+            return View(model);
+        }
+    }
+
+
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Logout()
+    {
+        await _signInManager.SignOutAsync();
+        return RedirectToAction("Index", "Home");
+    }
+
+
+    public async Task<IActionResult> Profile()
+    {
+        var currentUser = _userManager.GetUserAsync(User);
+        ViewBag.User = currentUser;
+        //var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == currentUser.)
+        return View();
     }
 }
+
