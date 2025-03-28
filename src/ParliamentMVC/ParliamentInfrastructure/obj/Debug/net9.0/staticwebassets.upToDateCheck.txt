@@ -35,6 +35,7 @@ D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\w
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\js\site.js
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\images\Account-icon.svg
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
@@ -117,6 +118,7 @@ wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 wwwroot\lib\bootstrap\LICENSE
 wwwroot\lib\images\abstract.svg
+wwwroot\lib\images\Account-icon.svg
 wwwroot\lib\images\GoogleMaps-logo.svg
 wwwroot\lib\images\Instagram-logo.svg
 wwwroot\lib\images\Telegram-logo.svg

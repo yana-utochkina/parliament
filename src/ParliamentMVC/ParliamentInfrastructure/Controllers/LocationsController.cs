@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ParliamentDomain.Model;
@@ -41,6 +42,7 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // GET: Locations/Create
+        [Authorize(Roles = "admin, worker")]
         public IActionResult Create()
         {
             ViewData["ContactId"] = new SelectList(_context.Contacts, "Id", "Email");
@@ -48,10 +50,9 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // POST: Locations/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> Create([Bind("Name,Address,ContactId,GoogleMapsLink,Id")] Location location)
         {
             Contact contact = _context.Contacts.FirstOrDefault(c => c.Id == location.ContactId);
@@ -70,6 +71,7 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // GET: Locations/Edit/5
+        [Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -87,10 +89,9 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // POST: Locations/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> Edit(int id, [Bind("Name,Address,ContactId,GoogleMapsLink,Id")] Location location)
         {
             if (id != location.Id)
@@ -128,6 +129,7 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // GET: Locations/Delete/5
+        [Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -149,6 +151,7 @@ namespace ParliamentInfrastructure.Controllers
         // POST: Locations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var location = await _context.Locations.FindAsync(id);

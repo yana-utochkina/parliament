@@ -16,6 +16,7 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // GET: Contacts
+        [Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Contacts.ToListAsync());
@@ -40,17 +41,16 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // GET: Contacts/Create
+        [Authorize(Roles = "admin, worker")]
         public IActionResult Create()
         {
             return View();
         }
 
         // POST: Contacts/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //[Authorize(Roles = "admin, worker")]
+        [Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> Create([Bind("Phone,Email,InstagramLink,TelegramLink,Id")] Contact contact)
         {
             if (ModelState.IsValid)
@@ -63,7 +63,7 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // GET: Contacts/Edit/5
-        //[Authorize(Roles = "admin, worker")]
+        [Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -80,11 +80,9 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // POST: Contacts/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //[Authorize(Roles = "admin, worker")]
+        [Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> Edit(int id, [Bind("Phone,Email,InstagramLink,TelegramLink,Id")] Contact contact)
         {
             if (id != contact.Id)
@@ -116,7 +114,7 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // GET: Contacts/Delete/5
-        //[Authorize(Roles = "admin, worker")]
+        [Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -135,7 +133,7 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // POST: Contacts/Delete/5
-        //[Authorize(Roles = "admin, worker")]
+        [Authorize(Roles = "admin, worker")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -145,8 +143,15 @@ namespace ParliamentInfrastructure.Controllers
             {
                 _context.Contacts.Remove(contact);
             }
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
 
-            await _context.SaveChangesAsync();
+            }
+            
             return RedirectToAction(nameof(Index));
         }
 

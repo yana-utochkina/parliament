@@ -205,6 +205,10 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\Account-icon.svg",
+      "PackagePath": "staticwebassets\\lib\\images\\Account-icon.svg"
+    },
+    {
       "Id": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\GoogleMaps-logo.svg",
       "PackagePath": "staticwebassets\\lib\\images\\GoogleMaps-logo.svg"
     },

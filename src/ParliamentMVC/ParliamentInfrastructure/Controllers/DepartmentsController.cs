@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ParliamentDomain.Model;
@@ -42,17 +43,16 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // GET: Departments/Create
+        [Authorize(Roles = "admin, worker")]
         public IActionResult Create()
         {
             ViewData["ContactId"] = new SelectList(_context.Contacts, "Id", "Email");
             return View();
         }
 
-        // POST: Departments/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> Create([Bind("Name,Description,ContactId,Id")] Department department)
         {
             Contact contact = _context.Contacts.FirstOrDefault(c => c.Id == department.ContactId);
@@ -71,6 +71,7 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // GET: Departments/Edit/5
+        [Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -87,11 +88,9 @@ namespace ParliamentInfrastructure.Controllers
             return View(department);
         }
 
-        // POST: Departments/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> Edit(int id, [Bind("Name,Description,ContactId,Id")] Department department)
         {
             if (id != department.Id)
@@ -129,6 +128,7 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         // GET: Departments/Delete/5
+        [Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -150,6 +150,7 @@ namespace ParliamentInfrastructure.Controllers
         // POST: Departments/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin, worker")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var department = await _context.Departments.FindAsync(id);

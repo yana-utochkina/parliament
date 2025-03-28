@@ -37,6 +37,9 @@
                         </li>
                     </ul>
                 </div>
+                <div>
+                    <a asp-controller="Account" asp-action="Details"><img style="max-width: 40px" src="~/lib/images/Account-icon.svg" /></a>
+                </div>
             </div>
         </nav>
     </header>
@@ -47,11 +50,6 @@
         </main>
     </div>
 
-    @* <footer class="border-top footer text-muted"> *@
-    @*     <div class="container"> *@
-    @*         &copy; 2025 - Студпарламент ФКНК - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
-    @*     </div> *@
-    @* </footer> *@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
