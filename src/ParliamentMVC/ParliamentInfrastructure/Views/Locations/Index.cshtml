@@ -8,7 +8,12 @@
 
 <p>
     <div class="container">
-        <a asp-action="Create" class="btn btn-primary">Створити нове місце</a>
+        @{
+            if (User.IsInRole("admin") || User.IsInRole("worker"))
+            {
+                <a asp-action="Create" class="btn btn-primary">Створити нову локацію</a>
+            }
+        }
     </div>
 </p>
 <hr/>

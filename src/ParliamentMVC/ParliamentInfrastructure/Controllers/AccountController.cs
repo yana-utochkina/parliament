@@ -115,10 +115,30 @@ public class AccountController : Controller
 
     public async Task<IActionResult> Profile()
     {
-        var currentUser = _userManager.GetUserAsync(User);
-        ViewBag.User = currentUser;
-        //var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == currentUser.)
-        return View();
+        try
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == currentUser.Email);
+            var profile = new ProfileViewModel(user);
+            return View(profile);
+        }
+        catch (Exception ex) 
+        {
+            return NotFound();
+        }
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Edit([Bind("Email,FullName,University,Faculty")] ProfileViewModel model)
+    {
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == model.Email);
+        user.FullName = model.FullName;
+        user.University = model.University;
+        user.Faculty = model.Faculty;
+
+        _context.Update(user);
+        _context.SaveChanges();
+        return RedirectToAction("Profile", "Account");
     }
 }
 

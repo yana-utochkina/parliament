@@ -17,12 +17,12 @@ namespace ParliamentInfrastructure.Controllers
             _userManager = userManager;
         }
 
-        [Authorize(Roles = "admin, worker")]
+        [Authorize(Roles = "admin")]
         public IActionResult Index() => View(_roleManager.Roles.ToList());
-        [Authorize(Roles = "admin, worker")]
+        [Authorize(Roles = "admin")]
         public IActionResult UserList() => View(_userManager.Users.ToList());
 
-        [Authorize(Roles = "admin, worker")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Edit(string userId)
         {
             DefaultUser user = await _userManager.FindByIdAsync(userId);
@@ -43,7 +43,7 @@ namespace ParliamentInfrastructure.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "admin, worker")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Edit(string userId, List<string> roles)
         {
             DefaultUser user = await _userManager.FindByIdAsync(userId);

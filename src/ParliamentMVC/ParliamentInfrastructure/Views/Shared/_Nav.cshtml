@@ -28,12 +28,17 @@
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
                         @if(User.Identity.IsAuthenticated)
                         {
-                            <li><a class="dropdown-item" href="#">Профіль</a></li>
-                            <li><a class="dropdown-item" href="#">Налаштування</a></li>
+                            <li><a class="dropdown-item" asp-controller="Account" asp-action="Profile">Профіль</a></li>
+                            if (User.IsInRole("admin"))
+                            {
+                                <li><a class="dropdown-item" asp-controller="Roles" asp-action="UserList">Керування ролями</a></li>
+                            }
+
                             <li><hr class="dropdown-divider"></li>
+
                             <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
                                 @Html.AntiForgeryToken()
-                                <button type="submit" class="dropdown-item">Вийти</button>
+                                <button type="submit" class="dropdown-item text-danger">Вийти</button>
                             </form>
                         }
                         else
