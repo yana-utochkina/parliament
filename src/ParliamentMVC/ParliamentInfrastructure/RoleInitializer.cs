@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using ParliamentDomain.Model;
 using ParliamentInfrastructure.Models;
 
 namespace ParliamentInfrastructure
 {
     public class RoleInitializer
     {
-        public static async Task InitializeAsync(UserManager<DefaultUser> userManager, RoleManager<IdentityRole> roleManager)
+        public static async Task InitializeAsync(UserManager<DefaultUser> userManager, RoleManager<IdentityRole> roleManager, ParliamentDbContext context)
         {
             string adminEmail = "admin@gmail.com";
             string password = "Qwerty_1";
@@ -27,11 +28,22 @@ namespace ParliamentInfrastructure
             }
             if (await userManager.FindByNameAsync(adminEmail) is null)
             {
-                DefaultUser admin = new DefaultUser { Email = adminEmail, UserName = adminEmail };
+                DefaultUser admin = new DefaultUser { Email = adminEmail, UserName = adminEmail, EmailConfirmed = true };
                 IdentityResult result = await userManager.CreateAsync(admin, password);
                 if (result.Succeeded)
                 {
                     await userManager.AddToRoleAsync(admin, "admin");
+                    User user = new User
+                    {
+                        Email = adminEmail,
+                        FullName = "Administrator", // За потреби додати більше полів
+                        University = "Default University",
+                        Faculty = "Admin Faculty"
+                    };
+
+                    // Додавання користувача до таблиці Users
+                    await context.Users.AddAsync(user);
+                    await context.SaveChangesAsync();
                 }
             }
         }

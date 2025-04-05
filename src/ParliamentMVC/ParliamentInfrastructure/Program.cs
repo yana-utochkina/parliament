@@ -40,7 +40,8 @@ using (var scope = app.Services.CreateScope())
     {
         var userManager = services.GetRequiredService<UserManager<DefaultUser>>();
         var rolesManager = services.GetRequiredService<RoleManager<IdentityRole>>();
-        await RoleInitializer.InitializeAsync(userManager, rolesManager);
+        var parliamentDbContext = services.GetRequiredService<ParliamentDbContext>();
+        await RoleInitializer.InitializeAsync(userManager, rolesManager, parliamentDbContext);
     }
     catch (Exception ex)
     {
