@@ -4,22 +4,31 @@ using Microsoft.EntityFrameworkCore;
 using ParliamentDomain.Model;
 using ParliamentInfrastructure.Models;
 using ParliamentInfrastructure.ViewModels;
+using System.Net.Mail;
+using System.Net;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Text;
 
 namespace ParliamentInfrastructure.Controllers;
 public class AccountController : Controller
 {
     private readonly UserManager<DefaultUser> _userManager;
     private readonly SignInManager<DefaultUser> _signInManager;
+    private readonly SmtpSettings _smtpSettings;
 
     private readonly ParliamentDbContext _context;
 
     public AccountController(
         UserManager<DefaultUser> userManager, 
-        SignInManager<DefaultUser> signInManager, 
+        SignInManager<DefaultUser> signInManager,
+        IOptions<SmtpSettings> smtpSettings,
         ParliamentDbContext context)
     {
         _userManager = userManager;
         _signInManager = signInManager;
+        _smtpSettings = smtpSettings.Value;
         _context = context;
     }
 
@@ -41,23 +50,36 @@ public class AccountController : Controller
             };
             var result = await _userManager.CreateAsync(defaultUser, model.Password);
 
-            defaultUser.EmailConfirmed = true;
-            await _userManager.UpdateAsync(defaultUser);
             if (result.Succeeded)
             {
-                await _signInManager.SignInAsync(defaultUser, false);
-                User user = new User
-                {
-                    Email = model.Email,
-                    FullName = model.FullName,
-                    Faculty = model.Faculty,
-                    University = model.University
-                };
+                var token = await _userManager.GenerateEmailConfirmationTokenAsync(defaultUser);
+                var encodedToken = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
+                var confirmationLink = Url.Action("ConfirmEmail", "Account",
+                    new { userId = defaultUser.Id, token = encodedToken }, Request.Scheme);
 
-                await _context.Users.AddAsync(user);
-                await _context.SaveChangesAsync();
 
-                return RedirectToAction("Index", "Home");
+                await SendEmailAsync(defaultUser.Email, "Confirm your email", confirmationLink);
+
+                TempData["FullName"] = model.FullName;
+                TempData["Faculty"] = model.Faculty;
+                TempData["University"] = model.University;
+                TempData["Email"] = model.Email;
+
+                return View("RegisterConfirmation");
+
+
+                //User user = new User
+                //{
+                //    Email = model.Email,
+                //    FullName = model.FullName,
+                //    Faculty = model.Faculty,
+                //    University = model.University
+                //};
+
+                //await _context.Users.AddAsync(user);
+                //await _context.SaveChangesAsync();
+
+                //return RedirectToAction("Index", "Home");
             }
             else
             {
@@ -70,6 +92,64 @@ public class AccountController : Controller
         return View(model);
     }
 
+    public async Task SendEmailAsync(string email, string subject, string message)
+    {
+        var smtpClient = new SmtpClient(_smtpSettings.Host)
+        {
+            Port = 587,
+            Credentials = new NetworkCredential(_smtpSettings.Username, _smtpSettings.Password),
+            EnableSsl = _smtpSettings.EnableSSL,
+        };
+
+        var mailMessage = new MailMessage
+        {
+            From = new MailAddress(_smtpSettings.Username),
+            Subject = subject,
+            Body = message,
+            IsBodyHtml = true,
+        };
+        mailMessage.To.Add(email);
+
+        await smtpClient.SendMailAsync(mailMessage);
+    }
+
+    [AllowAnonymous]
+    public async Task<IActionResult> ConfirmEmail(string userId, string token)
+    {
+        if (userId == null || token == null)
+            return View("Error");
+
+        var user = await _userManager.FindByIdAsync(userId);
+        if (user == null)
+            return View("Error");
+
+        var decodedToken = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(token));
+        var result = await _userManager.ConfirmEmailAsync(user, decodedToken);
+
+        if (result.Succeeded)
+        {
+            var fullName = TempData["FullName"]?.ToString() ?? "NoName";
+            var faculty = TempData["Faculty"]?.ToString() ?? "Unknown";
+            var university = TempData["University"]?.ToString() ?? "Unknown";
+
+            var fullUser = new User
+            {
+                Email = user.Email,
+                FullName = fullName,
+                Faculty = faculty,
+                University = university
+            };
+
+            _context.Users.Add(fullUser);
+            await _context.SaveChangesAsync();
+
+            return View("ConfirmEmailSuccess");
+        }
+
+        return View("Error");
+    }
+
+
 
     [HttpGet]
     public IActionResult Login(string returnUrl = null)
@@ -77,29 +157,36 @@ public class AccountController : Controller
         return View(new LoginViewModel { ReturnUrl = returnUrl });
     }
 
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Login([Bind("Email,Password,RememberMe,ReturnUrl")] LoginViewModel model)
+    public async Task<IActionResult> Login(LoginViewModel model)
     {
-        var user = await _userManager.FindByEmailAsync(model.Email);
-        user.EmailConfirmed = true;
-        await _userManager.UpdateAsync(user);
-        if (user == null)
+        if (ModelState.IsValid)
         {
-            ModelState.AddModelError(string.Empty, "Користувач не знайдений.");
-            return View(model);
-        }
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user != null)
+            {
+                if (!await _userManager.IsEmailConfirmedAsync(user))
+                {
+                    ModelState.AddModelError("", "You need to confirm your email before logging in.");
+                    return View(model);
+                }
 
-        var result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, false);
-        if (result.Succeeded)
-        {
-            return RedirectToAction("Index", "Home");
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+            ModelState.AddModelError("", "Invalid login attempt.");
         }
         else
         {
-            ModelState.AddModelError(string.Empty, "Невірний email або пароль.");
-            return View(model);
+            // Якщо ModelState не дійсна, вивести помилки
+            foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+            {
+                Console.WriteLine(error.ErrorMessage);
+            }
         }
+        return View(model);
     }
 
 
@@ -140,5 +227,11 @@ public class AccountController : Controller
         _context.SaveChanges();
         return RedirectToAction("Profile", "Account");
     }
+
+    public IActionResult RegisterConfirmation()
+    {
+        return View();
+    }
+
 }
 

@@ -25,7 +25,11 @@ builder.Services.AddDbContext<IdentityContext>(option => option.UseSqlServer(
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddIdentity<DefaultUser, IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
+builder.Services.AddIdentity<DefaultUser, IdentityRole>()
+    .AddEntityFrameworkStores<IdentityContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SmtpSettings"));
 
 var app = builder.Build();
 

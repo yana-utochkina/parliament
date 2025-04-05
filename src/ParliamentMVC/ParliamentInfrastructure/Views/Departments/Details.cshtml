@@ -6,10 +6,6 @@
 
 <h1>@Html.DisplayFor(model => model.Name)</h1>
 
-<div class="btn-group mb-2">
-    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Змінити</a>
-    <a asp-action="Index" class="btn btn-secondary">До усіх департаментів</a>
-</div>
 <hr />
 <div class="row">
     <div class="col-md-11">
@@ -18,10 +14,10 @@
     <div class="col-md-1">
         <p class="text-center"><b>Наші соцмережі:</b></p>
         <a href="@Html.DisplayFor(model => model.Contact.InstagramLink)" target="_blank">
-            <img style="max-width: 60px; margin: 8px;" src="~/lib/images/Instagram-logo.svg" />
+            <img style="width: 60px; margin: 8px;" src="~/lib/images/Instagram-logo.svg" />
         </a>
         <a href="@Html.DisplayFor(model => model.Contact.TelegramLink)" target="_blank">
-            <img style="max-width: 60px;margin: 8px;" src="~/lib/images/Telegram-logo.svg" />
+            <img style="width: 60px;margin: 8px;" src="~/lib/images/Telegram-logo.svg" />
         </a>
     </div>
 </div>
@@ -57,8 +53,17 @@
     </div>
 </div>
 
-
 <h2>Хочете зв'язатися з нами?</h2>
 <p>Напишіть нам лист на електронну пошту <b>@Html.DisplayFor(model => model.Contact.Email)</b></p>
-
-<a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>
+<a asp-action="Index" class="btn btn-secondary">До усіх департаментів</a>
+<br/>
+<br />
+@{
+    if (User.IsInRole("admin") || User.IsInRole("worker"))
+    {
+        <div class="btn-group mb-2">
+            <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Змінити</a>
+            <a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>
+        </div>
+    }
+}

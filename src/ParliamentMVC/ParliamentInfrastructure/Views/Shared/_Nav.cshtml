@@ -28,7 +28,12 @@
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
                         @if(User.Identity.IsAuthenticated)
                         {
-                            <li><a class="dropdown-item" asp-controller="Account" asp-action="Profile">Профіль</a></li>
+                            if (User.IsInRole("student") || User.IsInRole("guest") || User.IsInRole("worker"))
+                            {
+                                <li><a class="dropdown-item" asp-controller="Account" asp-action="Profile">Профіль</a></li>
+                                <li><a class="dropdown-item" asp-controller="MyEvents" asp-action="Index">Мої події</a></li>
+
+                            }
                             if (User.IsInRole("admin"))
                             {
                                 <li><a class="dropdown-item" asp-controller="Roles" asp-action="UserList">Керування ролями</a></li>

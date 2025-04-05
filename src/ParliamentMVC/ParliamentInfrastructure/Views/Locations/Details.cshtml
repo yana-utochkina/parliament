@@ -5,10 +5,7 @@
 }
 <h1>Місце</h1>
 <h4>@Html.DisplayFor(model => model.Name)</h4>
-<div class="btn-group mb-2">
-    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Змінити</a>
-    <a asp-action="Index" class="btn btn-secondary">До переліку локацій</a>
-</div>
+
 <hr />
 
 <div class="row">
@@ -41,5 +38,15 @@
     <b>Події в цьому місці: </b>
     <a asp-controller="Events" asp-action="Index" asp-route-locationId="@Model?.Id" class="text-decoration-underline text-info">Переглянути</a>
 </p>
-
-<a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>
+<a asp-action="Index" class="btn btn-secondary">До переліку локацій</a>
+<br />
+<br />
+@{
+    if (User.IsInRole("admin") || User.IsInRole("worker"))
+    {
+        <div class="btn-group mb-2">
+            <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Змінити</a>
+            <a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>
+        </div>
+    }
+}

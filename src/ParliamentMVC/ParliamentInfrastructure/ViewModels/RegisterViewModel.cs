@@ -15,7 +15,7 @@ public class RegisterViewModel
     [DataType(DataType.Password)]
     public string Password { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "Поле не повинно бути порожнім")]
     [Compare("Password", ErrorMessage =  "Паролі не співпадають")]
     [DisplayName("Підтвердження паролю")]
     [DataType(DataType.Password)]
@@ -25,11 +25,11 @@ public class RegisterViewModel
     [DisplayName("Ім'я повністю")]
     public string FullName { get; set; }
 
-    [Required(ErrorMessage = "Полен не повинно бути порожнім")]
+    [Required(ErrorMessage = "Поле не повинно бути порожнім")]
     [DisplayName("Університет")]
     public string University {  get; set; }
 
-    [Required(ErrorMessage = "Полен не повинно бути порожнім")]
+    [Required(ErrorMessage = "Поле не повинно бути порожнім")]
     [DisplayName("Факультет")]
     public string Faculty {  get; set; }
 }

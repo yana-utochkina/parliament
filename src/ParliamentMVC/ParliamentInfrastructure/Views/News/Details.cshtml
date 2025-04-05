@@ -7,10 +7,7 @@
 <h1>@Html.DisplayFor(model => model.Title)</h1>
 
 <h4>Новина</h4>
-<div class="btn-group mb-2">
-    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Змінити</a>
-    <a asp-action="Index" class="btn btn-secondary">До усіх новин</a>
-</div>
+
 <hr />
 <dl class="row">
     <dt class="col-sm-2">
@@ -32,5 +29,16 @@
 <div>
     @Html.Raw(Model.Description)
 </div>
-<a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>
+<a asp-action="Index" class="btn btn-secondary">До переліку новин</a>
+<br />
+<br />
+@{
+    if (User.IsInRole("admin") || User.IsInRole("worker"))
+    {
+        <div class="btn-group mb-2">
+            <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Змінити</a>
+            <a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Видалити</a>
+        </div>
+    }
+}
 

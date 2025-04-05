@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ParliamentInfrastructure.ViewModels.MyEventViewModel>
+
+@{
+    ViewData["Title"] = "My events";
+}
+
+<h2>Мої події</h2>
+
+<div class="row justify-content-center">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-10 d-flex justify-content-center">
+            <div class="card" style="width: 80rem;">
+                <div class="card-content">
+                    <div class="card-body">
+                        <h4 class="card-title"> @item.Title </h4>
+                    </div>
+                    <div class="card-footer">                       
+                        <div class="container d-flex justify-content-between">
+                            <span>
+                                @item.StartDate.ToString()
+                            </span>
+                            <span>
+                                @item.countUsers.ToString()
+                            </span>
+                            <div class="btn-group btn-group-large">
+                                <a class="btn btn-light-primary" asp-controller="Events" asp-action="Details" asp-route-id="@item.Id">
+                                    Детальніше
+                                </a>
+                                <a class="btn btn-light-primary" asp-controller="MyEvents" asp-action="Rate" asp-route-id="@item.UserEventDetailId">
+                                    Оцінити
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    }
+</div>
+
+
+
+
+
