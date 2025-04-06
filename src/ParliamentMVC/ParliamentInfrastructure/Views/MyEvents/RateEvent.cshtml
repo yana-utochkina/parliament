@@ -1,0 +1,46 @@
+﻿@model ParliamentInfrastructure.ViewModels.EventRatingViewModel
+
+@{
+    ViewData["Title"] = "Rate event";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">@Model.EventTitle</h4>
+            </div>
+            <div class="card-footer">
+                <p><strong>Дата проведення:</strong> @Model.EventDate.ToString("yyyy-MM-dd HH:mm")</p>
+
+                <p><strong>Середня оцінка:</strong> @(Model.AverageRating.HasValue ? Model.AverageRating.Value.ToString("0.0") : "Ще немає оцінок")</p>
+                <p><strong>Кількість оцінок:</strong> @Model.RatingCount</p>
+
+                <form method="post" asp-action="RateEvent">
+                    <div class="mb-3">
+                        <div class="d-flex">
+                            @for (var i = 1; i <= 5; i++)
+                            {
+                                <label class="me-2">
+                                    <input class="form-check-input" type="radio" name="UserRating" value="@i" @(Model.UserRating == i ? "checked" : "") />
+                                    @i
+                                </label>
+                            }
+                        </div>
+                    </div>
+                    <input type="hidden" name="EventId" value="@Model.EventId" />
+                    <input type="hidden" name="EventTitle" value="@Model.EventTitle" />
+
+                    <button type="submit" class="btn btn-primary mt-2">Підтвердити оцінку</button>
+                </form>
+
+                @if (Model.UserRating > 0)
+                {
+                    <form method="post" asp-action="CancelRating" asp-route-eventId="@Model.EventId">
+                        <button type="submit" class="btn btn-warning mt-2">Відмінити оцінку</button>
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+</div>

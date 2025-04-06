@@ -21,19 +21,31 @@
                                 @item.StartDate.ToString("yyyy-MM-dd HH:mm")
                             </span>
                             <span>
-                                @item.countUsers.ToString()
+                                Учасники: @item.countUsers.ToString()
                             </span>
                             <div class="btn-group btn-group-large">
                                 <a class="btn btn-light-primary" asp-controller="Events" asp-action="Details" asp-route-id="@item.Id">
                                     Детальніше
                                 </a>
-                                <a class="btn btn-light-primary" asp-controller="MyEvents" asp-action="Rate" asp-route-id="@item.UserEventDetailId">
+                                <a class="btn btn-light-primary" asp-controller="MyEvents" asp-action="RateEvent" asp-route-eventId="@item.Id">
                                     Оцінити
                                 </a>
-                                
-                                @if (!item.IsEventAvailableToJoin)
+
+                                @if (item.IsEventAvailableToJoin) // Якщо можна приєднатися до події
                                 {
-                                    <span class="btn btn-secondary" disabled>Вже зареєстровано</span>
+                                    <form method="post" asp-controller="MyEvents" asp-action="WishToGo" asp-route-eventId="@item.Id">
+                                        <button type="submit" class="btn btn-primary">
+                                            Реєстрація
+                                        </button>
+                                    </form>
+                                }
+                                else // Якщо вже зареєстровано
+                                {
+                                    <form method="post" asp-controller="MyEvents" asp-action="CancelRegistration" asp-route-eventId="@item.Id">
+                                        <button type="submit" class="btn btn-danger">
+                                            Відмінити реєстрацію
+                                        </button>
+                                    </form>
                                 }
                             </div>
                         </div>
