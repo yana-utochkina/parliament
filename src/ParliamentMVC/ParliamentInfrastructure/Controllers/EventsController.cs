@@ -25,12 +25,11 @@ namespace ParliamentInfrastructure.Controllers
             }
             if (departmentId == null)
             {
-                // Finding events by locationId
                 var eventsByLocation = _context.Events.Where(e => e.LocationId == locationId)
                     .Include(e => e.Location);
                 return View(await eventsByLocation.ToListAsync());
             }
-            // Finding events by departmentId
+
             var eventsByDepartment = _context.Events.Where(e => e.DepartmentId == departmentId)
                 .Include(e => e.Department);
             return View(await eventsByDepartment.ToListAsync());

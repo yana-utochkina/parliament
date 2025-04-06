@@ -20,13 +20,15 @@
                 <span>
                     @Model.StartTime.ToString()
                 </span>
-                <div class="btn-group btn-group-large">
+                <div class="btn-group">
                     <a class="btn btn-light-primary" asp-controller="Events" asp-action="Details" asp-route-id="@Model.Id">
                         Детальніше
                     </a>
-                    <a class="btn btn-primary">
-                        Хочу піти
-                    </a>
+                    <form method="post" asp-controller="MyEvents" asp-action="WishToGo" asp-route-eventId="@Model.Id">
+                        <button type="submit" class="btn btn-primary">
+                            Хочу піти
+                        </button>
+                    </form>
                 </div>
 
                 

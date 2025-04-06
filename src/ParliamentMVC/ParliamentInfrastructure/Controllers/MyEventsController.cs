@@ -25,34 +25,65 @@ public class MyEventsController : Controller
     {
         var email = _userManager.GetUserName(User);
         var user = await _context.Users.FirstOrDefaultAsync(x => x.Email == email);
-        var userEventDetails = await _context.UserEventDetails.Where(u => u.UserId == user.Id)
-            .Include(e => e.Event)
-            .ToListAsync();
+
+        var userEventDetails = await _context.UserEventDetails
+                                              .Where(u => u.UserId == user.Id)
+                                              .Include(e => e.Event)
+                                              .ToListAsync();
+
         var myEvents = new List<MyEventViewModel>();
+
         foreach (var item in userEventDetails)
         {
-            var myEvent = new MyEventViewModel();
-            myEvent.Id = item.EventId;
-            myEvent.UserEventDetailId = item.Id;
-            myEvent.Rating = item.Rating;
-            myEvent.StartDate = item.Event.StartDate;
-            myEvent.countUsers = _context.UserEventDetails.Where(t => t.EventId == item.EventId).Count();
+            var myEvent = new MyEventViewModel
+            {
+                Id = item.EventId,
+                UserEventDetailId = item.Id,
+                Rating = item.Rating,
+                StartDate = item.Event.StartDate,
+                countUsers = _context.UserEventDetails.Count(t => t.EventId == item.EventId),
+                Event = item.Event
+            };
+            myEvents.Add(myEvent);
         }
+
         return View(myEvents);
     }
 
+
     [HttpPost]
-    public async Task<IActionResult> WishToGo(string email, int eventId)
+    public async Task<IActionResult> WishToGo(int eventId)
     {
-        var userEventDetail = new UserEventDetail();
-        userEventDetail.EventId = eventId;
-        userEventDetail.Event = await _context.Events.FirstOrDefaultAsync(x => x.Id == eventId);
-        userEventDetail.User = await _context.Users.FirstOrDefaultAsync(x => x.Email == email);
-        userEventDetail.Role = "guest";
+        var email = _userManager.GetUserName(User);
+        if (email is null)
+        {
+            return RedirectToAction("Login", "Account");
+        }
+
+        var user = await _context.Users.FirstOrDefaultAsync(x => x.Email == email);
+
+        var existingEntry = await _context.UserEventDetails
+                                           .FirstOrDefaultAsync(x => x.UserId == user.Id && x.EventId == eventId);
+
+        if (existingEntry != null)
+        {
+            ModelState.AddModelError("", "Ви вже зареєстровані на цю подію.");
+            return RedirectToAction("Index");
+        }
+
+        var userEventDetail = new UserEventDetail
+        {
+            EventId = eventId,
+            UserId = user.Id,
+            Role = "guest"
+        };
+
         await _context.UserEventDetails.AddAsync(userEventDetail);
-        _context.SaveChanges();
+        await _context.SaveChangesAsync();
+
         return RedirectToAction("Index");
     }
+
 
     public IActionResult Rate()
     {

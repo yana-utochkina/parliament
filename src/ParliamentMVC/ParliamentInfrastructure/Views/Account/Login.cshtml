@@ -41,7 +41,10 @@
 						</div>
 						<input asp-for="ReturnUrl" type="hidden" />
 						<div class="d-flex justify-content-end">
-							<input class="btn btn-primary" type="submit" value="Увійти" />
+							<div class="btn-group">
+								<a asp-controller="Account" asp-action="Register" class="btn btn-outline-primary">Зареєструватися</a>
+								<input class="btn btn-primary" type="submit" value="Увійти" />
+							</div>
 						</div>
 					</div>
 				</form>

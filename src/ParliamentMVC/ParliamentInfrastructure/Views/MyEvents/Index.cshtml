@@ -13,12 +13,12 @@
             <div class="card" style="width: 80rem;">
                 <div class="card-content">
                     <div class="card-body">
-                        <h4 class="card-title"> @item.Title </h4>
+                        <h4 class="card-title">@item.Event.Title</h4>
                     </div>
-                    <div class="card-footer">                       
+                    <div class="card-footer">
                         <div class="container d-flex justify-content-between">
                             <span>
-                                @item.StartDate.ToString()
+                                @item.StartDate.ToString("yyyy-MM-dd HH:mm")
                             </span>
                             <span>
                                 @item.countUsers.ToString()
@@ -30,17 +30,16 @@
                                 <a class="btn btn-light-primary" asp-controller="MyEvents" asp-action="Rate" asp-route-id="@item.UserEventDetailId">
                                     Оцінити
                                 </a>
+                                
+                                @if (!item.IsEventAvailableToJoin)
+                                {
+                                    <span class="btn btn-secondary" disabled>Вже зареєстровано</span>
+                                }
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     }
 </div>
-
-
-
-
-

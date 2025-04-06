@@ -20,39 +20,47 @@
                 <li class="nav-item @(ViewBag.ActivePage == "Locations" ? "active" : "")">
                     @Html.ActionLink("Місця", "Index", "Locations", null, new { @class = "nav-link" })
                 </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown">
-                        <img style="max-width: 40px;" src="~/lib/images/Account-icon.svg" class="rounded-circle" alt="Профіль">
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                        @if(User.Identity.IsAuthenticated)
-                        {
-                            if (User.IsInRole("student") || User.IsInRole("guest") || User.IsInRole("worker"))
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown">
+                            <img style="max-width: 40px;" src="~/lib/images/Account-icon.svg" class="rounded-circle" alt="Профіль">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            @if (User.Identity.IsAuthenticated)
                             {
-                                <li><a class="dropdown-item" asp-controller="Account" asp-action="Profile">Профіль</a></li>
-                                <li><a class="dropdown-item" asp-controller="MyEvents" asp-action="Index">Мої події</a></li>
+                                if (User.IsInRole("student") || User.IsInRole("guest") || User.IsInRole("worker"))
+                                {
+                                    <li><a class="dropdown-item" asp-controller="Account" asp-action="Profile">Профіль</a></li>
+                                    <li><a class="dropdown-item" asp-controller="MyEvents" asp-action="Index">Мої події</a></li>
 
+                                }
+                                if (User.IsInRole("admin"))
+                                {
+                                    <li><a class="dropdown-item" asp-controller="Roles" asp-action="UserList">Керування ролями</a></li>
+                                }
+
+                                <li><hr class="dropdown-divider"></li>
+
+                                <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="dropdown-item text-danger">Вийти</button>
+                                </form>
                             }
-                            if (User.IsInRole("admin"))
+                            else
                             {
-                                <li><a class="dropdown-item" asp-controller="Roles" asp-action="UserList">Керування ролями</a></li>
+                                <li><a class="dropdown-item" asp-controller="Account" asp-action="Register">Зареєструватися</a></li>
+                                <li><a class="dropdown-item" asp-controller="Account" asp-action="Login">Увійти</a></li>
                             }
-
-                            <li><hr class="dropdown-divider"></li>
-
-                            <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
-                                @Html.AntiForgeryToken()
-                                <button type="submit" class="dropdown-item text-danger">Вийти</button>
-                            </form>
-                        }
-                        else
-                        {
-                            <li><a class="dropdown-item" asp-controller="Account" asp-action="Register">Зареєструватися</a></li>
-                            <li><a class="dropdown-item" asp-controller="Account" asp-action="Login">Увійти</a></li>
-                        }
-                    </ul>
-                </li>
+                        </ul>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="btn btn-dark" asp-controller="Account" asp-action="Login">Увійти</a>
+                    </li>
+                }
             </ul>
         </div>
     </div>
