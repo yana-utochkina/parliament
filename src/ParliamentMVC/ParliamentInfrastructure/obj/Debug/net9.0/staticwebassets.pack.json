@@ -217,6 +217,10 @@
       "PackagePath": "staticwebassets\\lib\\images\\Instagram-logo.svg"
     },
     {
+      "Id": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\Statistic-icon.svg",
+      "PackagePath": "staticwebassets\\lib\\images\\Statistic-icon.svg"
+    },
+    {
       "Id": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\Telegram-logo.svg",
       "PackagePath": "staticwebassets\\lib\\images\\Telegram-logo.svg"
     },

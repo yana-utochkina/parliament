@@ -8,7 +8,7 @@ public partial class Event : Entity
     public int? LocationId { get; set; }
 
     [Display(Name = "Департамент")]
-    public int? DepartmentId { get; set; }
+    public int DepartmentId { get; set; }
 
     [Display(Name = "Назва події")]
     [Required(ErrorMessage = "Поле не повинно бути порожнім")]

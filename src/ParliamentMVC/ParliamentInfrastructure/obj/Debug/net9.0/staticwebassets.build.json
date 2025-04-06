@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7Nr4pe/+AfEvPnMYkVm78luzuuTuF7e89FM0Oaxgfhc=",
+  "Hash": "0+24HNYppNfDBZ2c6VHGCQHZmpm0GCPO0SH4+4cQP5c=",
   "Source": "ParliamentInfrastructure",
   "BasePath": "_content/ParliamentInfrastructure",
   "Mode": "Default",
@@ -435,6 +435,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\auanu3tfgk-epnfqtu1o0.gz",
+      "SourceId": "ParliamentInfrastructure",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ParliamentInfrastructure",
+      "RelativePath": "lib/images/Statistic-icon#[.{fingerprint=epnfqtu1o0}]?.svg.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\Statistic-icon.svg",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "rpkp25a95z",
+      "Integrity": "H4uSw/kplVsScIFUWS3wAdq65YJZEvbrsfhSHSV2WaA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\Statistic-icon.svg"
     },
     {
       "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\b40hvymxwo-v6xxc2o7l9.gz",
@@ -2682,6 +2703,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\images\\Instagram-logo.svg"
+    },
+    {
+      "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\Statistic-icon.svg",
+      "SourceId": "ParliamentInfrastructure",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\",
+      "BasePath": "_content/ParliamentInfrastructure",
+      "RelativePath": "lib/images/Statistic-icon#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "epnfqtu1o0",
+      "Integrity": "PswrO4W0Vu6/fzePaa2sXIvHs/kgX6yu6PFE80QZCkY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\images\\Statistic-icon.svg"
     },
     {
       "Identity": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\Telegram-logo.svg",
@@ -18894,6 +18936,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-y9Mc2LScfwitCr1HaDkS8E6V5XNiZMzpYHX9bcbCXP4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Statistic-icon.epnfqtu1o0.svg",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\auanu3tfgk-epnfqtu1o0.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000994035785"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1005"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H4uSw/kplVsScIFUWS3wAdq65YJZEvbrsfhSHSV2WaA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 11:36:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"PswrO4W0Vu6/fzePaa2sXIvHs/kgX6yu6PFE80QZCkY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "epnfqtu1o0"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/images/Statistic-icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PswrO4W0Vu6/fzePaa2sXIvHs/kgX6yu6PFE80QZCkY="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Statistic-icon.epnfqtu1o0.svg",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\Statistic-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2811"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PswrO4W0Vu6/fzePaa2sXIvHs/kgX6yu6PFE80QZCkY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 11:36:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "epnfqtu1o0"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/images/Statistic-icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PswrO4W0Vu6/fzePaa2sXIvHs/kgX6yu6PFE80QZCkY="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Statistic-icon.epnfqtu1o0.svg.gz",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\auanu3tfgk-epnfqtu1o0.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1005"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H4uSw/kplVsScIFUWS3wAdq65YJZEvbrsfhSHSV2WaA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 11:36:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "epnfqtu1o0"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/images/Statistic-icon.svg.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H4uSw/kplVsScIFUWS3wAdq65YJZEvbrsfhSHSV2WaA="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Statistic-icon.svg",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\auanu3tfgk-epnfqtu1o0.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000994035785"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1005"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H4uSw/kplVsScIFUWS3wAdq65YJZEvbrsfhSHSV2WaA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 11:36:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"PswrO4W0Vu6/fzePaa2sXIvHs/kgX6yu6PFE80QZCkY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PswrO4W0Vu6/fzePaa2sXIvHs/kgX6yu6PFE80QZCkY="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Statistic-icon.svg",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\wwwroot\\lib\\images\\Statistic-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2811"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PswrO4W0Vu6/fzePaa2sXIvHs/kgX6yu6PFE80QZCkY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 11:36:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PswrO4W0Vu6/fzePaa2sXIvHs/kgX6yu6PFE80QZCkY="
+        }
+      ]
+    },
+    {
+      "Route": "lib/images/Statistic-icon.svg.gz",
+      "AssetFile": "D:\\Learning\\University2\\ISandTP\\SPF\\src\\ParliamentMVC\\ParliamentInfrastructure\\obj\\Debug\\net9.0\\compressed\\auanu3tfgk-epnfqtu1o0.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1005"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H4uSw/kplVsScIFUWS3wAdq65YJZEvbrsfhSHSV2WaA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 11:36:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-H4uSw/kplVsScIFUWS3wAdq65YJZEvbrsfhSHSV2WaA="
         }
       ]
     },

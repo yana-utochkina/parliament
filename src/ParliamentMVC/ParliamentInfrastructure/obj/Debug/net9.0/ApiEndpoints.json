@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "ContainingType": "ParliamentInfrastructure.Controllers.ChartController",
+    "Method": "GetCountByMonthAsync",
+    "RelativePath": "api/chart/countByMonth/{departmentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "departmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

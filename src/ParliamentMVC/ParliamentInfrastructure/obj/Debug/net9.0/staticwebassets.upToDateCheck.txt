@@ -18,6 +18,7 @@ D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\w
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\js\bootstrap.js
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\images\Statistic-icon.svg
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\css\site.css
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\jquery\LICENSE.txt
 D:\Learning\University2\ISandTP\SPF\src\ParliamentMVC\ParliamentInfrastructure\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
@@ -121,6 +122,7 @@ wwwroot\lib\images\abstract.svg
 wwwroot\lib\images\Account-icon.svg
 wwwroot\lib\images\GoogleMaps-logo.svg
 wwwroot\lib\images\Instagram-logo.svg
+wwwroot\lib\images\Statistic-icon.svg
 wwwroot\lib\images\Telegram-logo.svg
 wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js

@@ -1,8 +1,26 @@
 ﻿@model IEnumerable<ParliamentDomain.Model.Event>
-
+@{
+    int departmentId = 0;
+}
 @{
     ViewData["Title"] = "Events";
 }
+
+<!-- Загальна модалка -->
+<div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="chartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="chartModalLabel">Статистика подій</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+            </div>
+            <div class="modal-body">
+                <div id="chart-container" style="width: 650px; height: 600px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <h1>Події</h1>
 
@@ -23,9 +41,55 @@
             @foreach (var item in Model)
             {
                 <div class="col-md-10 d-flex justify-content-center">
-                    @await Component.InvokeAsync("EventCardComponent", new EventCardViewModel(item.Id, item.Title, item.Department.Name, item.AccessType, item.StartDate))
+                    @await Component.InvokeAsync("EventCardComponent", new EventCardViewModel(item.Id, item.Title, item.Department.Id, item.Department.Name, item.AccessType, item.StartDate))
                 </div>
             }
         </div>
     </div>
 </section>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+    google.charts.load('current', { packages: ['corechart'] });
+
+    function drawChart(eventId, DepartmentName, departmentId) {
+        google.charts.setOnLoadCallback(() => {
+            fetch(`/api/chart/countByMonth/${departmentId}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Формуємо масив для побудови графіка
+                    const chartData = [['Місяць', 'Кількість подій']];
+                    data.forEach(item => {
+                        chartData.push([item.month, item.count]);
+                    });
+
+                    const dataTable = google.visualization.arrayToDataTable(chartData);
+
+                    const options = {
+                        title: `Активність департаменту: ${DepartmentName}`,
+                        height: 600,
+                        width: 700,
+                        colors: ['#FF5733'],
+                        іbackgroundColor: '#f0f0f0',
+                        curveType: 'none',
+                        legend: { position: 'bottom' },
+                        hAxis: {
+                            title: 'Місяць',
+                            textStyle: { fontSize: 14 }
+                        },
+                        vAxis: {
+                            title: 'Кількість подій',
+                            format: '0'
+                        }
+                    };
+
+                    const chart = new google.visualization.LineChart(document.getElementById('chart-container'));
+                    chart.draw(dataTable, options);
+                })
+                .catch(err => {
+                    console.error('Помилка при завантаженні статистики:', err);
+                    document.getElementById('chart-container').innerText = 'Не вдалося завантажити графік';
+                });
+        });
+    }
+</script>
