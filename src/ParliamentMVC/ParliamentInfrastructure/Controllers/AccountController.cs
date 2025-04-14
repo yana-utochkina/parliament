@@ -11,9 +11,18 @@ using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.WebUtilities;
 using System.Text;
 using QRCoder;
-using System.Drawing;
-using System.Drawing.Imaging;
 using ParliamentInfrastructure.Models.QRCodePOC;
+using System.Drawing.Imaging;
+using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.Drawing.Wordprocessing;
+using PdfSharpCore.Drawing;
+using PdfSharpCore.Pdf;
+using Picture = DocumentFormat.OpenXml.Drawing.Picture;
+
+using NonVisualGraphicFrameDrawingProperties = DocumentFormat.OpenXml.Drawing.NonVisualGraphicFrameDrawingProperties;
+using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml;
+
 
 namespace ParliamentInfrastructure.Controllers;
 public class AccountController : Controller
@@ -242,43 +251,130 @@ public class AccountController : Controller
     {
         return View();
     }
-
     [HttpPost]
-    public async Task<ActionResult> AddUser(RegisterViewModel model)
+    public async Task<IActionResult> AddUser(RegisterViewModel model)
     {
         if (ModelState.IsValid)
         {
-            DefaultUser defaultUser = new DefaultUser
+            var user = new DefaultUser
             {
                 Email = model.Email,
                 UserName = model.Email
             };
-            var result = await _userManager.CreateAsync(defaultUser, model.Password);
+
+            var result = await _userManager.CreateAsync(user, model.Password);
 
             if (result.Succeeded)
             {
-                var token = await _userManager.GenerateEmailConfirmationTokenAsync(defaultUser);
+                var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                 var encodedToken = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
                 var confirmationLink = Url.Action("ConfirmEmail", "Account",
-                    new { userId = defaultUser.Id, token = encodedToken }, Request.Scheme);
+                    new { userId = user.Id, token = encodedToken }, Request.Scheme);
 
-                TempData["FullName"] = model.FullName;
-                TempData["Faculty"] = model.Faculty;
-                TempData["University"] = model.University;
-                TempData["Email"] = model.Email;
-
-                var qrBytes = GenerateQrCode(confirmationLink);
-                return File(qrBytes, "image/png", "confirmation_qr.png");
-            }
-            else
-            {
-                foreach (var error in result.Errors)
+                // Generate QR code
+                byte[] qrCodeBytes;
+                using (var qrGenerator = new QRCodeGenerator())
                 {
-                    ModelState.AddModelError(string.Empty, error.Description);
+                    var qrData = qrGenerator.CreateQrCode(confirmationLink, QRCodeGenerator.ECCLevel.Q);
+                    using (var qrCode = new QRCode(qrData))
+                    using (var bitmap = qrCode.GetGraphic(20))
+                    using (var ms = new MemoryStream())
+                    {
+                        bitmap.Save(ms, ImageFormat.Png);
+                        qrCodeBytes = ms.ToArray();
+                    }
+                }
+
+                // Create PDF
+                using (var stream = new MemoryStream())
+                {
+                    var document = new PdfDocument();
+                    var page = document.AddPage();
+                    var gfx = XGraphics.FromPdfPage(page);
+                    var font = new XFont("Arial", 14, XFontStyle.Regular);
+
+                    gfx.DrawString("Інформація для підтвердження акаунту", font, XBrushes.Black,
+                        new XRect(0, 20, page.Width, 20), XStringFormats.TopCenter);
+
+                    gfx.DrawString($"Ім'я: {model.FullName}", font, XBrushes.Black,
+                        new XRect(20, 60, page.Width, 20), XStringFormats.TopLeft);
+
+                    gfx.DrawString($"Email: {model.Email}", font, XBrushes.Black,
+                        new XRect(20, 90, page.Width, 20), XStringFormats.TopLeft);
+
+                    gfx.DrawString("Скануйте QR-код:", font, XBrushes.Black,
+                        new XRect(20, 130, page.Width, 20), XStringFormats.TopLeft);
+
+                    using (var imageStream = new MemoryStream(qrCodeBytes))
+                    {
+                        var qrImage = XImage.FromStream(() => imageStream);
+                        gfx.DrawImage(qrImage, 20, 160, 150, 150);
+                    }
+
+                    document.Save(stream);
+                    stream.Position = 0;
+
+                    return File(stream.ToArray(), "application/pdf", "confirmation.pdf");
                 }
             }
+
+            foreach (var error in result.Errors)
+                ModelState.AddModelError(string.Empty, error.Description);
         }
+
         return View(model);
+    }
+
+    private Drawing GetImageElement(string relationshipId, string name, long width, long height)
+    {
+        var drawing = new Drawing(
+            new Inline(
+                new Extent() { Cx = width * 9525, Cy = height * 9525 },
+                new EffectExtent()
+                {
+                    LeftEdge = 0L,
+                    TopEdge = 0L,
+                    RightEdge = 0L,
+                    BottomEdge = 0L
+                },
+                new DocProperties() { Id = (UInt32Value)1U, Name = name },
+                new NonVisualGraphicFrameDrawingProperties(new GraphicFrameLocks() { NoChangeAspect = true }),
+                new Graphic(
+                    new GraphicData(
+                        new Picture(
+                            new NonVisualPictureProperties(
+                                new NonVisualDrawingProperties()
+                                {
+                                    Id = (UInt32Value)0U,
+                                    Name = name
+                                },
+                                new NonVisualPictureDrawingProperties()
+                            ),
+                            new BlipFill(
+                                new Blip() { Embed = relationshipId, CompressionState = BlipCompressionValues.Print },
+                                new Stretch(new FillRectangle())
+                            ),
+                            new ShapeProperties(
+                                new Transform2D(
+                                    new Offset() { X = 0L, Y = 0L },
+                                    new Extents() { Cx = width * 9525, Cy = height * 9525 }
+                                ),
+                                new PresetGeometry(new AdjustValueList()) { Preset = ShapeTypeValues.Rectangle }
+                            )
+                        )
+                    )
+                    { Uri = "http://schemas.openxmlformats.org/drawingml/2006/picture" }
+                )
+            )
+            {
+                DistanceFromTop = (UInt32Value)0U,
+                DistanceFromBottom = (UInt32Value)0U,
+                DistanceFromLeft = (UInt32Value)0U,
+                DistanceFromRight = (UInt32Value)0U
+            }
+        );
+
+        return drawing;
     }
 
 
@@ -292,12 +388,6 @@ public class AccountController : Controller
 
         bitmap.Save(stream, ImageFormat.Png);
         return stream.ToArray(); // Це масив байтів PNG-файлу
-    }
-
-    public IActionResult DownloadQrCode(string confirmationLink)
-    {
-        var qrBytes = GenerateQrCode(confirmationLink);
-        return File(qrBytes, "image/png", "confirmation_qr.png");
     }
 }
 
