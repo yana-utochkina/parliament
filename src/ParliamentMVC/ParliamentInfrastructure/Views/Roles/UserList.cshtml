@@ -16,3 +16,18 @@
 	}
 </table>
 
+<a asp-action="Create"
+   class="btn btn-primary rounded-circle"
+   style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; font-size: 30px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.3);"
+   data-bs-toggle="tooltip"
+   data-bs-placement="left"
+   title="Додати користувачів">
+	+
+</a>
+
+<script>
+	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+	tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+		new bootstrap.Tooltip(tooltipTriggerEl);
+	});
+</script>

@@ -1,0 +1,78 @@
+﻿@model ParliamentInfrastructure.ViewModels.RegisterViewModel
+
+<div class="card col-md-6">
+	<div class="card-content">
+		<div class="card-body">
+			<form class="form form-horizontal" method="post" asp-controller="Account" asp-action="Register">
+				<div class="form-body row">
+					<div class="col-md-4 text-end">
+						<label asp-for="Email"></label>
+						<small class="text-danger">*</small>
+					</div>
+					<div class="col-md-8 form-group">
+						<input asp-for="Email" class="form-control @(ViewData.ModelState["Email"]?.Errors.Count > 0 ? "is-invalid" : "")" placeholder="example@gmail.com">
+						<div class="invalid-feedback">
+							<i class="bx bx-radio-circle"></i>
+							<span asp-validation-for="Email"></span>
+						</div>
+					</div>
+					<div class="col-md-4 text-end">
+						<label asp-for="Password"></label>
+						<small class="text-danger">*</small>
+					</div>
+					<div class="col-md-8 form-group">
+						<input asp-for="Password" class="form-control @(ViewData.ModelState["Password"]?.Errors.Count > 0 ? "is-invalid" : "")" placeholder="Придумайте пароль">
+						<div class="invalid-feedback">
+							<i class="bx bx-radio-circle"></i>
+							<span asp-validation-for="Password"></span>
+						</div>
+					</div>
+					<div class="col-md-4 text-end">
+						<label asp-for="PasswordConfirm"></label>
+					</div>
+					<div class="col-md-8 form-group">
+						<input asp-for="PasswordConfirm" class="form-control @(ViewData.ModelState["PasswordConfirm"]?.Errors.Count > 0 ? "is-invalid" : "")" placeholder="Повторіть пароль">
+						<div class="invalid-feedback">
+							<i class="bx bx-radio-circle"></i>
+							<span asp-validation-for="PasswordConfirm"></span>
+						</div>
+					</div>
+					<hr class="table-group-divider" />
+					<div class="col-md-4 text-end">
+						<label asp-for="FullName"></label>
+						<small class="text-danger">*</small>
+					</div>
+					<div class="col-md-8 form-group">
+						<input asp-for="FullName" class="form-control @(ViewData.ModelState["FullName"]?.Errors.Count > 0 ? "is-invalid" : "")" placeholder="Введіть прізвище ім'я	">
+						<div class="invalid-feedback">
+							<i class="bx bx-radio-circle"></i>
+							<span asp-validation-for="FullName"></span>
+						</div>
+					</div>
+					<div class="col-md-4 text-end">
+						<label asp-for="University"></label>
+						<small class="text-danger">*</small>
+					</div>
+					<div class="col-md-8 form-group">
+						<input asp-for="University" class="form-control @(ViewData.ModelState["University"]?.Errors.Count > 0 ? "is-invalid" : "")" placeholder="Введіть назву університету">
+						<div class="invalid-feedback">
+							<i class="bx bx-radio-circle"></i>
+							<span asp-validation-for="University"></span>
+						</div>
+					</div>
+					<div class="col-md-4 text-end">
+						<label asp-for="Faculty"></label>
+						<small class="text-danger">*</small>
+					</div>
+					<div class="col-md-8 form-group">
+						<input asp-for="Faculty" class="form-control @(ViewData.ModelState["Faculty"]?.Errors.Count > 0 ? "is-invalid" : "")" placeholder="Введіть назву факультету">
+						<div class="invalid-feedback">
+							<i class="bx bx-radio-circle"></i>
+							<span asp-validation-for="Faculty"></span>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
