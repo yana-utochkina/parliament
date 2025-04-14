@@ -28,6 +28,10 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[D:/Learning/University2/ISandTP/SPF/src/ParliamentMVC/ParliamentInfrastructure/Views/Account/AddUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Learning/University2/ISandTP/SPF/src/ParliamentMVC/ParliamentInfrastructure/Views/Account/ConfirmEmailSuccess.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtRW1haWxTdWNjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -190,10 +194,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Learning/University2/ISandTP/SPF/src/ParliamentMVC/ParliamentInfrastructure/Views/Shared/Components/NewsCardComponent/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmV3c0NhcmRDb21wb25lbnRcRGVmYXVsdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Learning/University2/ISandTP/SPF/src/ParliamentMVC/ParliamentInfrastructure/Views/Shared/Components/RegisterCardComponent/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUmVnaXN0ZXJDYXJkQ29tcG9uZW50XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Learning/University2/ISandTP/SPF/src/ParliamentMVC/ParliamentInfrastructure/Views/Shared/Error.cshtml]

@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Cryptography;
 
 namespace ParliamentInfrastructure.ViewModels;
 
@@ -32,4 +33,25 @@ public class RegisterViewModel
     [Required(ErrorMessage = "Поле не повинно бути порожнім")]
     [DisplayName("Факультет")]
     public string Faculty {  get; set; }
+
+
+    public static string GenerateRandomPassword(int length = 12)
+    {
+        const string validChars = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@$?_-";
+        char[] password = new char[length];
+        using (var rng = RandomNumberGenerator.Create())
+        {
+            byte[] uintBuffer = new byte[sizeof(uint)];
+
+            for (int i = 0; i < length; i++)
+            {
+                rng.GetBytes(uintBuffer);
+                uint num = BitConverter.ToUInt32(uintBuffer, 0);
+                password[i] = validChars[(int)(num % (uint)validChars.Length)];
+            }
+        }
+
+        return new string(password);
+    }
+
 }

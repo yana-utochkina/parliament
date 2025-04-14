@@ -10,6 +10,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.WebUtilities;
 using System.Text;
+using QRCoder;
+using System.Drawing;
+using System.Drawing.Imaging;
+using ParliamentInfrastructure.Models.QRCodePOC;
 
 namespace ParliamentInfrastructure.Controllers;
 public class AccountController : Controller
@@ -233,5 +237,67 @@ public class AccountController : Controller
         return View();
     }
 
+    [HttpGet]
+    public IActionResult AddUser()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public async Task<ActionResult> AddUser(RegisterViewModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            DefaultUser defaultUser = new DefaultUser
+            {
+                Email = model.Email,
+                UserName = model.Email
+            };
+            var result = await _userManager.CreateAsync(defaultUser, model.Password);
+
+            if (result.Succeeded)
+            {
+                var token = await _userManager.GenerateEmailConfirmationTokenAsync(defaultUser);
+                var encodedToken = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
+                var confirmationLink = Url.Action("ConfirmEmail", "Account",
+                    new { userId = defaultUser.Id, token = encodedToken }, Request.Scheme);
+
+                TempData["FullName"] = model.FullName;
+                TempData["Faculty"] = model.Faculty;
+                TempData["University"] = model.University;
+                TempData["Email"] = model.Email;
+
+                var qrBytes = GenerateQrCode(confirmationLink);
+                return File(qrBytes, "image/png", "confirmation_qr.png");
+            }
+            else
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+            }
+        }
+        return View(model);
+    }
+
+
+    public byte[] GenerateQrCode(string confirmationLink)
+    {
+        using var qrGenerator = new QRCodeGenerator();
+        using var qrData = qrGenerator.CreateQrCode(confirmationLink, QRCodeGenerator.ECCLevel.Q);
+        using var qrCode = new QRCode(qrData);
+        using var bitmap = qrCode.GetGraphic(20);
+        using var stream = new MemoryStream();
+
+        bitmap.Save(stream, ImageFormat.Png);
+        return stream.ToArray(); // Це масив байтів PNG-файлу
+    }
+
+    public IActionResult DownloadQrCode(string confirmationLink)
+    {
+        var qrBytes = GenerateQrCode(confirmationLink);
+        return File(qrBytes, "image/png", "confirmation_qr.png");
+    }
 }
 
