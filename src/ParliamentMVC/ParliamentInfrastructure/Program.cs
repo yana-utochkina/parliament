@@ -1,7 +1,6 @@
 using ParliamentInfrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using ParliamentInfrastructure.Models;
 using ParliamentInfrastructure.Models.QRCodePOC;
 using QRCoder;

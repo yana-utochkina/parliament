@@ -79,20 +79,6 @@ public class AccountController : Controller
                 TempData["Email"] = model.Email;
 
                 return View("RegisterConfirmation");
-
-
-                //User user = new User
-                //{
-                //    Email = model.Email,
-                //    FullName = model.FullName,
-                //    Faculty = model.Faculty,
-                //    University = model.University
-                //};
-
-                //await _context.Users.AddAsync(user);
-                //await _context.SaveChangesAsync();
-
-                //return RedirectToAction("Index", "Home");
             }
             else
             {
@@ -249,81 +235,113 @@ public class AccountController : Controller
     [HttpGet]
     public IActionResult AddUser()
     {
-        return View();
+        var model = new RegisterUsersViewModel
+        {
+            Users = new List<RegisterViewModel>
+            {
+                new RegisterViewModel()
+            }
+        };
+
+        return View(model);
     }
+
     [HttpPost]
-    public async Task<IActionResult> AddUser(RegisterViewModel model)
+    public async Task<IActionResult> AddUser(RegisterUsersViewModel model)
     {
         if (ModelState.IsValid)
         {
-            var user = new DefaultUser
+            var document = new PdfDocument();
+            int userIndex = 0;
+            XFont font = new XFont("Arial", 14, XFontStyle.Regular);
+
+            XGraphics gfx = null;
+            PdfPage page = null;
+
+            foreach (var userModel in model.Users)
             {
-                Email = model.Email,
-                UserName = model.Email
-            };
-
-            var result = await _userManager.CreateAsync(user, model.Password);
-
-            if (result.Succeeded)
-            {
-                var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                var encodedToken = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
-                var confirmationLink = Url.Action("ConfirmEmail", "Account",
-                    new { userId = user.Id, token = encodedToken }, Request.Scheme);
-
-                // Generate QR code
-                byte[] qrCodeBytes;
-                using (var qrGenerator = new QRCodeGenerator())
+                var user = new DefaultUser
                 {
-                    var qrData = qrGenerator.CreateQrCode(confirmationLink, QRCodeGenerator.ECCLevel.Q);
-                    using (var qrCode = new QRCode(qrData))
-                    using (var bitmap = qrCode.GetGraphic(20))
-                    using (var ms = new MemoryStream())
+                    Email = userModel.Email,
+                    UserName = userModel.Email
+                };
+
+                var result = await _userManager.CreateAsync(user, userModel.Password);
+
+                if (result.Succeeded)
+                {
+                    var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                    var encodedToken = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
+                    var confirmationLink = Url.Action("ConfirmEmail", "Account",
+                        new { userId = user.Id, token = encodedToken }, Request.Scheme);
+
+                    byte[] qrCodeBytes;
+                    using (var qrGenerator = new QRCodeGenerator())
                     {
-                        bitmap.Save(ms, ImageFormat.Png);
-                        qrCodeBytes = ms.ToArray();
+                        var qrData = qrGenerator.CreateQrCode(confirmationLink, QRCodeGenerator.ECCLevel.Q);
+                        using (var qrCode = new QRCode(qrData))
+                        using (var bitmap = qrCode.GetGraphic(20))
+                        using (var ms = new MemoryStream())
+                        {
+                            bitmap.Save(ms, ImageFormat.Png);
+                            qrCodeBytes = ms.ToArray();
+                        }
                     }
-                }
 
-                // Create PDF
-                using (var stream = new MemoryStream())
-                {
-                    var document = new PdfDocument();
-                    var page = document.AddPage();
-                    var gfx = XGraphics.FromPdfPage(page);
-                    var font = new XFont("Arial", 14, XFontStyle.Regular);
+                    if (userIndex % 4 == 0)
+                    {
+                        page = document.AddPage();
+                        gfx = XGraphics.FromPdfPage(page);
+                    }
 
-                    gfx.DrawString("Інформація для підтвердження акаунту", font, XBrushes.Black,
-                        new XRect(0, 20, page.Width, 20), XStringFormats.TopCenter);
+                    int blockHeight = (int)(page.Height / 4);
+                    int topOffset = blockHeight * (userIndex % 4);
 
-                    gfx.DrawString($"Ім'я: {model.FullName}", font, XBrushes.Black,
-                        new XRect(20, 60, page.Width, 20), XStringFormats.TopLeft);
+                    // Рамка
+                    gfx.DrawRectangle(XPens.Black, 10, topOffset + 10, page.Width - 20, blockHeight - 20);
 
-                    gfx.DrawString($"Email: {model.Email}", font, XBrushes.Black,
-                        new XRect(20, 90, page.Width, 20), XStringFormats.TopLeft);
-
-                    gfx.DrawString("Скануйте QR-код:", font, XBrushes.Black,
-                        new XRect(20, 130, page.Width, 20), XStringFormats.TopLeft);
-
-                    using (var imageStream = new MemoryStream(qrCodeBytes))
+                    // QR-код
+                    using (var imageStream = new MemoryStream(qrCodeBytes.ToArray()))
                     {
                         var qrImage = XImage.FromStream(() => imageStream);
-                        gfx.DrawImage(qrImage, 20, 160, 150, 150);
+                        gfx.DrawImage(qrImage, 30, topOffset + 20, 150, 150);
                     }
 
-                    document.Save(stream);
-                    stream.Position = 0;
+                    // Текст справа від QR-коду
+                    gfx.DrawString("Інформація для підтвердження акаунту", font, XBrushes.Black,
+                        new XRect(200, topOffset + 20, page.Width - 160, 20), XStringFormats.TopLeft);
 
-                    return File(stream.ToArray(), "application/pdf", "confirmation.pdf");
+                    gfx.DrawString($"Ім'я: {userModel.FullName}", font, XBrushes.Black,
+                        new XRect(200, topOffset + 60, page.Width - 160, 20), XStringFormats.TopLeft);
+
+                    gfx.DrawString($"Email: {userModel.Email}", font, XBrushes.Black,
+                        new XRect(200, topOffset + 90, page.Width - 160, 20), XStringFormats.TopLeft);
+
+                    gfx.DrawString("Скануйте QR-код:", font, XBrushes.Black,
+                        new XRect(200, topOffset + 120, page.Width - 160, 20), XStringFormats.TopLeft);
+
+                    userIndex++;
+                }
+                else
+                {
+                    foreach (var error in result.Errors)
+                        ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
 
-            foreach (var error in result.Errors)
-                ModelState.AddModelError(string.Empty, error.Description);
+            using (var stream = new MemoryStream())
+            {
+                document.Save(stream);
+                stream.Position = 0;
+                return File(stream.ToArray(), "application/pdf", "confirmation_all.pdf");
+            }
         }
 
         return View(model);
     }
+
+
+
 
     [HttpGet]
     public IActionResult ChangePassword()
